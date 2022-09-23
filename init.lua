@@ -1,0 +1,44 @@
+-- 基础设置
+require('basic')
+
+-- 快捷键映射
+require("keybindings")
+
+-- Packer 插件管理
+require("plugins")
+
+-- 主题设置 （新增）
+require("colorscheme")
+
+-- 插件配置
+require("plugin-config.nvim-tree")
+
+-- 顶部标签栏
+require("plugin-config.bufferline")
+
+-- 底部信息标签栏
+require("plugin-config.lualine")
+
+-- 全局搜索
+require("plugin-config.telescope")
+
+require("plugin-config.dashboard")
+require("plugin-config.project")
+
+-- 语法高亮
+require("plugin-config.nvim-treesitter")
+
+-- 内置LSP (新增)
+require("lsp.setup")
+
+-- 代码片段
+require("lsp.cmp") --  (新增)
+
+-- UI美化
+require("lsp.ui") -- 新增
+
+-- indent-blankline
+require("plugin-config.indent-blankline")
+
+-- formatter
+require("lsp.null-ls")
