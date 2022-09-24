@@ -59,19 +59,25 @@ map("n", "qq", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
 
 -- insert 模式下，跳到行首行尾
-map("i", "<C-h>", "<ESC>I", opt)
-map("i", "<C-l>", "<ESC>A", opt)
+map("i", "<C-f>", "<ESC>I", opt)
+map("i", "<C-e>", "<ESC>A", opt)
+
+-- ctrl+s保存
+map("n", "<C-s>", ":w<CR>", opt)
+map("i", "<C-s>", "<ESC>:w<CR>i", opt)
 
 -- bufferline
 -- 左右Tab切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+
 -- 关闭
 --"moll/vim-bbye"
 map("n", "<C-w>", ":Bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+
 -- Telescope
 -- 查找文件
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
@@ -108,7 +114,7 @@ pluginKeys.mapLSP = function(mapbuf)
 	--[[
   Lspsaga 替换 gr
   mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
-  --]]
+  ]]
 	mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
 	--[[
   Lspsaga 替换 gp, gj, gk

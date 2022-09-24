@@ -42,6 +42,8 @@ packer.startup({
 		--------------------git-----------------------
 		use("lewis6991/gitsigns.nvim")
 		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+		-- 注释
+		use("numToStr/Comment.nvim")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
