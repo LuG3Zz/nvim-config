@@ -1,9 +1,8 @@
 -- 屏蔽掉neovim::Ext
 
-
 pcall(
-  vim.cmd,
-  [[
+	vim.cmd,
+	[[
     let g:loaded_perl_provider = 0
   ]]
 )
@@ -62,3 +61,6 @@ require("dap.go") -- go
 
 -- 注释
 require("plugin-config.comment")
+
+-- gitsigns
+require("plugin-config.gitsigns")

@@ -10,7 +10,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		-- Formatting ---------------------
-		--  brew install shfmt
+		-- shfmt
 		formatting.shfmt,
 		-- StyLua
 		formatting.stylua,
@@ -26,6 +26,8 @@ null_ls.setup({
 		formatting.buf,
 		-- nix
 		formatting.nixfmt,
+		-- gitsigns
+		null_ls.builtins.code_actions.gitsigns,
 		-- frontend
 		formatting.prettier.with({ -- 只比默认配置少了 markdown
 			filetypes = {
