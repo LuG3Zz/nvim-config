@@ -1,3 +1,13 @@
+-- 屏蔽掉neovim::Ext
+
+
+pcall(
+  vim.cmd,
+  [[
+    let g:loaded_perl_provider = 0
+  ]]
+)
+
 -- 基础设置
 require("basic")
 
