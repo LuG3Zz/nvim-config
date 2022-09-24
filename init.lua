@@ -42,3 +42,10 @@ require("plugin-config.indent-blankline")
 
 -- formatter
 require("lsp.null-ls")
+
+-- 大纲
+require("plugin-config.symols-outline")
+
+-- DAP
+require("dap.nvim-dap")
+require("dap.go") -- go

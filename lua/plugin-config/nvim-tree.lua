@@ -51,7 +51,7 @@ nvim_tree.setup({
     -- wsl install -g wsl-open
     -- https://github.com/4U6U57/wsl-open/
     system_open = {
-        cmd = 'open', -- mac 直接设置为 open
+        cmd = '', -- mac 直接设置为 open
     },
     -- project plugin 需要这样设置
     update_cwd = true,
