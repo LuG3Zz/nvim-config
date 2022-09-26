@@ -16,6 +16,7 @@ null_ls.setup({
 		formatting.stylua,
 		-- go
 		formatting.gofumpt,
+		formatting.goimports,
 		-- python
 		formatting.autopep8,
 		-- cmake
@@ -28,6 +29,8 @@ null_ls.setup({
 		formatting.nixfmt,
 		-- gitsigns
 		null_ls.builtins.code_actions.gitsigns,
+		-- Fix common misspellings in source code
+		formatting.codespell,
 		-- frontend
 		formatting.prettier.with({ -- 只比默认配置少了 markdown
 			filetypes = {

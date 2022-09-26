@@ -31,6 +31,8 @@ packer.startup({
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- 大纲
 		use("simrat39/symbols-outline.nvim")
+		-- quick run
+		use({ "is0n/jaq-nvim" })
 		--------------------- LSP --------------------
 		-- Lspconfig
 		use({ "neovim/nvim-lspconfig" })
