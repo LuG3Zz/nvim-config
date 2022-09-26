@@ -46,6 +46,8 @@ packer.startup({
 		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- 注释
 		use("numToStr/Comment.nvim")
+		-- 自动添加括号
+		use("windwp/nvim-autopairs")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎

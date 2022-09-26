@@ -65,3 +65,6 @@ require("plugin-config.comment")
 
 -- gitsigns
 require("plugin-config.gitsigns")
+
+-- autopairs
+require("plugin-config.nvim-autopairs")
