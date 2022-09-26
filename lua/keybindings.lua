@@ -78,14 +78,17 @@ map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
+map("n", "ol", ":SymbolsOutline<CR>", opt)
+
+-- 配置复制快捷键
+map("v", "<C-c>", '"+y', opt) -- 复制
+map("v", "<C-x>", '"+d', opt) -- 剪切
+
 -- Telescope
 -- 查找文件
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
-
--- 配置复制快捷键
-map("v", "<C-c>", '"+y', opt)
 
 -- 插件快捷键
 local pluginKeys = {}
