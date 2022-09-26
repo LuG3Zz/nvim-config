@@ -1,5 +1,4 @@
 -- 屏蔽掉neovim::Ext
-
 pcall(
 	vim.cmd,
 	[[
@@ -31,20 +30,22 @@ require("plugin-config.lualine")
 -- 全局搜索
 require("plugin-config.telescope")
 
+-- 首页面板
 require("plugin-config.dashboard")
+-- 最近项目，配合面板使用
 require("plugin-config.project")
 
 -- 语法高亮
 require("plugin-config.nvim-treesitter")
 
--- 内置LSP (新增)
+-- 内置LSP
 require("lsp.setup")
 
 -- 代码片段
-require("lsp.cmp") --  (新增)
+require("lsp.cmp")
 
 -- UI美化
-require("lsp.ui") -- 新增
+require("lsp.ui")
 
 -- indent-blankline
 require("plugin-config.indent-blankline")
