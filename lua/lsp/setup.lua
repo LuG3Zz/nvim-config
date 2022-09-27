@@ -22,6 +22,7 @@ local opts = {
 
 -- go
 lspconfig.gopls.setup(opts)
+-- lspconfig.golangci_lint_ls.setup({})
 -- vue
 lspconfig.vuels.setup(opts)
 lspconfig.sumneko_lua.setup({
