@@ -50,6 +50,8 @@ packer.startup({
 		use("windwp/nvim-autopairs")
 		-- floaterm
 		use("voldikss/vim-floaterm")
+		-- translator
+		use("voldikss/vim-translator")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎

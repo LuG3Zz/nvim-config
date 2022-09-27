@@ -99,6 +99,10 @@ map("n", "fc", ":FloatermKill<CR>", opt)
 map("n", "fd", ":FloatermNew lazydocker <CR>", opt)
 map("n", "fg", ":FloatermNew lazygit <CR>", opt)
 
+-- translator
+map("n", "tl", ":TranslateW<CR>", opt)
+map("v", "tl", ":TranslateW<CR>", opt)
+
 -- 插件快捷键
 local pluginKeys = {}
 
