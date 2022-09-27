@@ -289,6 +289,11 @@ _G.packer_plugins = {
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
+  ["vim-translator"] = {
+    loaded = true,
+    path = "/home/jin/.local/share/nvim/site/pack/packer/start/vim-translator",
+    url = "https://github.com/voldikss/vim-translator"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/vim-vsnip",
