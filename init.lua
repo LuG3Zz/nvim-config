@@ -68,3 +68,6 @@ require("plugin-config.gitsigns")
 
 -- autopairs
 require("plugin-config.nvim-autopairs")
+
+-- impatient
+require("impatient")

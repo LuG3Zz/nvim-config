@@ -52,6 +52,8 @@ packer.startup({
 		use("voldikss/vim-floaterm")
 		-- translator
 		use("voldikss/vim-translator")
+		-- 缓存插件，通过将lua编译为字节码缓存提高启动速度
+		use("lewis6991/impatient.nvim")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
