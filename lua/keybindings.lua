@@ -293,27 +293,11 @@ pluginKeys.gitsigns = function(bufnr)
 	end
 
 	-- Navigation
-	gitsignsMap("n", "]c", function()
-		if vim.wo.diff then
-			return "]c"
-		end
-		vim.schedule(function()
-			gs.next_hunk()
-		end)
-		return "<Ignore>"
-	end, { expr = true })
-
-	gitsignsMap("n", "[c", function()
-		if vim.wo.diff then
-			return "[c"
-		end
-		vim.schedule(function()
-			gs.prev_hunk()
-		end)
-		return "<Ignore>"
-	end, { expr = true })
+	gitsignsMap("n", "<leader>j", ":Gitsigns next_hunk<CR>")
+	gitsignsMap("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
 
 	-- Actions
+
 	gitsignsMap({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>")
 	gitsignsMap({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>")
 	gitsignsMap("n", "<leader>hS", gs.stage_buffer)
