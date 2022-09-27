@@ -48,6 +48,8 @@ packer.startup({
 		use("numToStr/Comment.nvim")
 		-- 自动添加括号
 		use("windwp/nvim-autopairs")
+		-- floaterm
+		use("voldikss/vim-floaterm")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎

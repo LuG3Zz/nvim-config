@@ -90,6 +90,14 @@ map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
+-- 悬浮终端 floaterm
+map("n", "ft", ":FloatermNew<CR>", opt)
+map("n", "fj", ":FloatermPrev<CR>", opt)
+map("n", "fk", ":FloatermNext<CR>", opt)
+map("n", "fc", ":FloatermKill<CR>", opt)
+map("n", "fd", ":FloatermNew lazydocker <CR>", opt)
+map("n", "fg", ":FloatermNew lazygit <CR>", opt)
+
 -- 插件快捷键
 local pluginKeys = {}
 
@@ -295,7 +303,6 @@ pluginKeys.gitsigns = function(bufnr)
 	-- Navigation
 	gitsignsMap("n", "<leader>j", ":Gitsigns next_hunk<CR>")
 	gitsignsMap("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
-
 	-- Actions
 
 	gitsignsMap({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>")
