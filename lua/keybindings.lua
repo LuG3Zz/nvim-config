@@ -103,6 +103,9 @@ map("n", "fg", ":FloatermNew lazygit <CR>", opt)
 map("n", "tl", ":TranslateW<CR>", opt)
 map("v", "tl", ":TranslateW<CR>", opt)
 
+-- auto-save
+map("n", "<leader>n", ":ASToggle<CR>", opt)
+
 -- 插件快捷键
 local pluginKeys = {}
 
