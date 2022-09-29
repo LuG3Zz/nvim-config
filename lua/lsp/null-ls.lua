@@ -28,7 +28,7 @@ null_ls.setup({
 		-- nix
 		formatting.nixfmt,
 		-- gitsigns
-		null_ls.builtins.code_actions.gitsigns,
+		-- null_ls.builtins.code_actions.gitsigns,
 		-- Fix common misspellings in source code
 		formatting.codespell,
 		-- frontend

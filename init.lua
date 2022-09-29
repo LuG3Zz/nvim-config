@@ -71,3 +71,6 @@ require("plugin-config.nvim-autopairs")
 
 -- impatient
 require("impatient")
+
+-- auro-save
+require("plugin-config.auto-save")
