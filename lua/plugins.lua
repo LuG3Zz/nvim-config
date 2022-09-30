@@ -30,8 +30,6 @@ packer.startup({
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- 大纲
 		use("simrat39/symbols-outline.nvim")
-		-- quick run
-		use({ "is0n/jaq-nvim" })
 		--------------------- LSP --------------------
 		-- Lspconfig
 		use({ "neovim/nvim-lspconfig" })
@@ -55,6 +53,8 @@ packer.startup({
 		use("lewis6991/impatient.nvim")
 		-- auto-save
 		use("Pocco81/auto-save.nvim")
+		-- lua complete
+		use("folke/lua-dev.nvim")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
