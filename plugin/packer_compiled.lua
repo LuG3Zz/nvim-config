@@ -214,6 +214,11 @@ _G.packer_plugins = {
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
     url = "https://github.com/leoluz/nvim-dap-go"
   },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/home/jin/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
+  },
   ["nvim-dap-ui"] = {
     loaded = true,
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
@@ -223,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
+  ["nvim-gdb"] = {
+    loaded = true,
+    path = "/home/jin/.local/share/nvim/site/pack/packer/start/nvim-gdb",
+    url = "https://github.com/sakhnik/nvim-gdb"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

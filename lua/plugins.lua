@@ -38,7 +38,9 @@ packer.startup({
 		use("theHamsta/nvim-dap-virtual-text")
 		use("rcarriga/nvim-dap-ui")
 		use("nvim-telescope/telescope-dap.nvim")
-		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" })
+		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" }) -- go debug
+		use({ "mfussenegger/nvim-dap-python", requires = "mfussenegger/nvim-dap" }) -- python debug
+		use("sakhnik/nvim-gdb") -- lldb gdb
 		--------------------git-----------------------
 		use("lewis6991/gitsigns.nvim")
 		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
