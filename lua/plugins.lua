@@ -37,6 +37,7 @@ packer.startup({
 		use("mfussenegger/nvim-dap")
 		use("theHamsta/nvim-dap-virtual-text")
 		use("rcarriga/nvim-dap-ui")
+		use("nvim-telescope/telescope-dap.nvim")
 		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" })
 		--------------------git-----------------------
 		use("lewis6991/gitsigns.nvim")
