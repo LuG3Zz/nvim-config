@@ -70,7 +70,7 @@ lspsaga.init_lsp_saga({
 	move_in_saga = { prev = "<C-p>", next = "<C-n>" },
 	-- Error, Warn, Info, Hint
 	-- use emoji like
--- 	{ "🙀", "😿", "😾", "😺" },
+	-- 	{ "🙀", "😿", "😾", "😺" },
 	-- or
 	-- { "😡", "😥", "😤", "😐" }
 	-- and diagnostic_header can be a function type
@@ -126,18 +126,6 @@ lspsaga.init_lsp_saga({
 	rename_action_quit = "<C-c>",
 	rename_in_select = true,
 	-- show symbols in winbar must nightly
-	symbol_in_winbar = {
-		in_custom = false,
-		enable = false,
-		separator = " ",
-		show_file = true,
-		-- define how to customize filename, eg: %:., %
-		-- if not set, use default value `%:t`
-		-- more information see `vim.fn.expand` or `expand`
-		-- ## only valid after set `show_file = true`
-		file_formatter = "",
-		click_support = false,
-	},
 	-- show outline
 	show_outline = {
 		win_position = "right",
