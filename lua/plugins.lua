@@ -23,11 +23,10 @@ packer.startup({
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 		-- ui (新增)
 		use("onsails/lspkind-nvim")
-		use("tami5/lspsaga.nvim") -- 新增
+		use("glepnir/lspsaga.nvim") -- 新增
 		-- indent-blankline
 		use("lukas-reineke/indent-blankline.nvim")
 		-- 代码格式化
-		-- use("mhartington/formatter.nvim")
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- 大纲
 		use("simrat39/symbols-outline.nvim")
