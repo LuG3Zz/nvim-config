@@ -114,15 +114,6 @@ vim.keymap.set("n", "[t", function()
 	require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
--- TODO:
--- FIX:
--- WARNING:
--- NOTE:
--- HACK:
--- BUG:
--- PERF:
---
-
 -- 插件快捷键
 local pluginKeys = {}
 
