@@ -78,3 +78,6 @@ require("plugin-config.auto-save")
 
 -- todo-comments
 require("plugin-config.todo-comments")
+
+-- colorizer
+require("plugin-config.colorizer")

@@ -62,6 +62,8 @@ packer.startup({
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- trouble
 		use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
+		-- colorizer
+		use("norcalli/nvim-colorizer.lua")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
