@@ -75,3 +75,6 @@ require("impatient")
 
 -- auro-save
 require("plugin-config.auto-save")
+
+-- todo-comments
+require("plugin-config.todo-comments")

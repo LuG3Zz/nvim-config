@@ -58,6 +58,8 @@ packer.startup({
 		use("Pocco81/auto-save.nvim")
 		-- lua complete
 		use("folke/lua-dev.nvim")
+		-- todo -Comment
+		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
