@@ -5,6 +5,8 @@ if not status then
 end
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
@@ -28,9 +30,12 @@ null_ls.setup({
 		-- nix
 		formatting.nixfmt,
 		-- gitsigns
-		null_ls.builtins.code_actions.gitsigns,
+		code_actions.gitsigns,
 		-- Fix common misspellings in source code
 		formatting.codespell,
+
+		diagnostics.eslint,
+		code_actions.eslint,
 		-- frontend
 		formatting.prettier.with({ -- 只比默认配置少了 markdown
 			filetypes = {
@@ -48,11 +53,15 @@ null_ls.setup({
 				"markdown",
 				"graphql",
 			},
-			prefer_local = "node_modules/.bin",
 		}),
 		-- formatting.fixjson,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 	},
+	-- #{m}: message
+	-- #{s}: source name (defaults to null-ls if not specified)
+	-- #{c}: code (if available)
+	-- 提示格式： [eslint] xxx
+	diagnostics_format = "[#{s}] #{m}",
 	-- 保存自动格式化
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then

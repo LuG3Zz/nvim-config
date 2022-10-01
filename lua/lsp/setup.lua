@@ -45,6 +45,7 @@ lspconfig.html.setup({
 	end,
 })
 lspconfig.tsserver.setup(opts)
+-- lspconfig.eslint.setup(opts)
 
 -- cssls
 lspconfig.cssls.setup({
