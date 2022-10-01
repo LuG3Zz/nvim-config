@@ -106,6 +106,7 @@ map("v", "tl", ":TranslateW<CR>", opt)
 -- auto-save
 map("n", "<leader>n", ":ASToggle<CR>", opt)
 
+-- todo-comments keybinding
 vim.keymap.set("n", "]t", function()
 	require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
@@ -113,6 +114,13 @@ end, { desc = "Next todo comment" })
 vim.keymap.set("n", "[t", function()
 	require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
+
+map("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opt)
+map("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opt)
+map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opt)
+map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opt)
+map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opt)
+map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
@@ -244,12 +252,19 @@ pluginKeys.nvimTreeList = {
 	{ key = "p", action = "paste" },
 	{ key = "s", action = "system_open" },
 }
+
+-- local actions = require("telescope.actions")
+-- local trouble = require("trouble.providers.telescope")
+--
+-- local telescope = require("telescope")
+
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
 	i = {
 		-- 上下移动
 		["<C-j>"] = "move_selection_next",
 		["<C-k>"] = "move_selection_previous",
+		-- ["<C-t>"] = trouble.open_with_trouble,
 		["<Down>"] = "move_selection_next",
 		["<Up>"] = "move_selection_previous",
 		-- 历史记录
@@ -261,6 +276,7 @@ pluginKeys.telescopeList = {
 		["<C-u>"] = "preview_scrolling_up",
 		["<C-d>"] = "preview_scrolling_down",
 	},
+	-- n = { ["<c-t>"] = trouble.open_with_trouble },
 }
 
 -- nvim-dap
