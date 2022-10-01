@@ -20,10 +20,10 @@ local opts = {
 	end,
 }
 
--- html
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+-- html
 lspconfig.html.setup({
 	capabilities = capabilities,
 	settings = {},
@@ -44,6 +44,8 @@ lspconfig.html.setup({
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
 	end,
 })
+lspconfig.tsserver.setup(opts)
+
 -- cssls
 lspconfig.cssls.setup({
 	capabilities = capabilities,
@@ -69,10 +71,24 @@ lspconfig.cssls.setup({
 -- json
 lspconfig.jsonls.setup({
 	capabilities = capabilities,
-})
+	settings = {},
+	flags = {
+		debounce_text_changes = 150,
+	},
+	on_attach = function(client, bufnr)
+		-- 禁用格式化功能，交给专门插件插件处理
+		client.resolved_capabilities.document_formatting = false
+		client.resolved_capabilities.document_range_formatting = false
 
--- eslint
-lspconfig.eslint.setup(opts)
+		local function buf_set_keymap(...)
+			vim.api.nvim_buf_set_keymap(bufnr, ...)
+		end
+		-- 绑定快捷键
+		require("keybindings").mapLSP(buf_set_keymap)
+		-- 保存时自动格式化
+		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+	end,
+})
 
 -- go
 lspconfig.gopls.setup(opts)
