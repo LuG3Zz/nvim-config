@@ -23,7 +23,10 @@ packer.startup({
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 		-- ui (新增)
 		use("onsails/lspkind-nvim")
-		use("glepnir/lspsaga.nvim") -- 新增
+		use({
+        "glepnir/lspsaga.nvim",
+        commit="04e8167740c66193686ea3d14b511c7b160ea755",
+    }) -- 新增
 		-- indent-blankline
 		use("lukas-reineke/indent-blankline.nvim")
 		-- 代码格式化
