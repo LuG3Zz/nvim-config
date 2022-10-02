@@ -9,12 +9,13 @@ local servers = {
 	"jsonls",
 	"gopls",
 	"vuels",
-	"ccls",
+	"clangd",
 	"cmake",
 	"bashls",
 	"dockerls",
 	"yamlls",
 	"rnix",
+	"pyright",
 }
 
 for _, value in pairs(servers) do

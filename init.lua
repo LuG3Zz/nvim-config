@@ -85,3 +85,6 @@ require("plugin-config.colorizer")
 
 -- typescript.nvim
 require("plugin-config.typescript")
+
+-- fidget
+require("plugin-config.fidget")

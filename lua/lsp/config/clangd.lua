@@ -1,13 +1,5 @@
-local opt={
-	init_options = {
-		compilationDatabaseDirectory = "build",
-		index = {
-			threads = 0,
-		},
-		clang = {
-			excludeArgs = { "-frounding-math" },
-		},
-	},
+local opt = {
+	settings = {},
 	flags = {
 		debounce_text_changes = 150,
 	},
@@ -25,4 +17,5 @@ local opt={
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
 	end,
 }
+
 return opt

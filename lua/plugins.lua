@@ -10,7 +10,6 @@ packer.startup({
 		use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
 		-- lualine (新增)
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-		use("arkav/lualine-lsp-progress")
 		-- telescope （新增）
 		use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 		-- telescope extensions
