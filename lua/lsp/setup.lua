@@ -3,6 +3,7 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"sumneko_lua",
 	"html",
+	"emmet_ls",
 	"tsserver",
 	"cssls",
 	"jsonls",
@@ -12,7 +13,7 @@ local servers = {
 	"cmake",
 	"bashls",
 	"dockerls",
-	"ymalls",
+	"yamlls",
 	"rnix",
 }
 
