@@ -33,8 +33,9 @@ null_ls.setup({
 		code_actions.gitsigns,
 		-- Fix common misspellings in source code
 		formatting.codespell,
-
+		-- diagnostics eslint
 		diagnostics.eslint,
+		-- code_action eslint
 		code_actions.eslint,
 		-- frontend
 		formatting.prettier.with({ -- 只比默认配置少了 markdown
@@ -54,8 +55,6 @@ null_ls.setup({
 				"graphql",
 			},
 		}),
-		-- formatting.fixjson,
-		-- formatting.black.with({ extra_args = { "--fast" } }),
 	},
 	-- #{m}: message
 	-- #{s}: source name (defaults to null-ls if not specified)
