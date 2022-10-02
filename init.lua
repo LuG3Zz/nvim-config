@@ -82,3 +82,6 @@ require("plugin-config.todo-comments")
 
 -- colorizer
 require("plugin-config.colorizer")
+
+-- typescript.nvim
+require("plugin-config.typescript")

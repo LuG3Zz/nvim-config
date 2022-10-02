@@ -24,9 +24,9 @@ packer.startup({
 		-- ui (新增)
 		use("onsails/lspkind-nvim")
 		use({
-        "glepnir/lspsaga.nvim",
-        commit="04e8167740c66193686ea3d14b511c7b160ea755",
-    }) -- 新增
+			"glepnir/lspsaga.nvim",
+			commit = "04e8167740c66193686ea3d14b511c7b160ea755",
+		}) -- 新增
 		-- indent-blankline
 		use("lukas-reineke/indent-blankline.nvim")
 		-- 代码格式化
@@ -67,6 +67,9 @@ packer.startup({
 		use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
 		-- colorizer
 		use("norcalli/nvim-colorizer.lua")
+		-- typescript nvim
+		use("jose-elias-alvarez/typescript.nvim")
+
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
