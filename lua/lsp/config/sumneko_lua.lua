@@ -1,4 +1,4 @@
-local opt= {
+local opt = {
 	settings = {
 		Lua = {
 			runtime = {
@@ -6,7 +6,7 @@ local opt= {
 				version = "LuaJIT",
 				-- Setup your lua path
 				--                 path = runtime_path,
-				pathStrict = true,
+				pathStrict = false,
 			},
 			diagnostics = {
 				-- Get the language server to recognize the `vim` global
