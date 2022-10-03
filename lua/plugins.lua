@@ -68,6 +68,8 @@ packer.startup({
 		use("norcalli/nvim-colorizer.lua")
 		-- typescript nvim
 		use("jose-elias-alvarez/typescript.nvim")
+		-- clangd nvim
+		use("p00f/clangd_extensions.nvim")
 		-- fidget
 		use("j-hui/fidget.nvim")
 		-- 补全引擎

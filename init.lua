@@ -86,5 +86,8 @@ require("plugin-config.colorizer")
 -- typescript.nvim
 require("plugin-config.typescript")
 
+-- clangd_extensions
+require("plugin-config.clangd_extensions")
+
 -- fidget
 require("plugin-config.fidget")
