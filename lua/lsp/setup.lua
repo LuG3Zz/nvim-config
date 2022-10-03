@@ -4,7 +4,7 @@ local servers = {
 	"sumneko_lua",
 	"html",
 	"emmet_ls",
-	"tsserver",
+	-- "tsserver",
 	"cssls",
 	"jsonls",
 	"gopls",
