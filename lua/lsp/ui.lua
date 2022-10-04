@@ -2,7 +2,7 @@ vim.diagnostic.config({
 	virtual_text = true,
 	signs = true,
 	-- 在输入模式下也更新提示，设置为 true 也许会影响性能
-	update_in_insert = true,
+	update_in_insert = false,
 })
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
@@ -62,12 +62,12 @@ local lspsaga = require("lspsaga")
 lspsaga.init_lsp_saga({
 	-- Options with default value
 	-- "single" | "double" | "rounded" | "bold" | "plus"
-	border_style = "single",
+	border_style = "plus",
 	--the range of 0 for fully opaque window (disabled) to 100 for fully
 	--transparent background. Values between 0-30 are typically most useful.
 	saga_winblend = 0,
 	-- when cursor in saga window you config these to move
-	move_in_saga = { prev = "<C-p>", next = "<C-n>" },
+	move_in_saga = { prev = "<C-,>", next = "<C-.>" },
 	-- Error, Warn, Info, Hint
 	-- use emoji like
 	-- 	{ "🙀", "😿", "😾", "😺" },
@@ -147,6 +147,34 @@ lspsaga.init_lsp_saga({
 	-- the related filetypes into this table
 	-- like server_filetype_map = { metals = { "sbt", "scala" } }
 	server_filetype_map = {},
+	code_action_lightbulb = {
+		enable = true,
+	},
+	symbol_in_winbar = {
+		enable = true,
+		click_support = function(node, clicks, button, modifiers)
+			-- To see all avaiable details: vim.pretty_print(node)
+			local st = node.range.start
+			local en = node.range["end"]
+			if button == "l" then
+				if clicks == 2 then
+				-- double left click to do nothing
+				else -- jump to node's starting line+char
+					vim.fn.cursor(st.line + 1, st.character + 1)
+				end
+			elseif button == "r" then
+				if modifiers == "s" then
+					print("lspsaga") -- shift right click to print "lspsaga"
+				end -- jump to node's ending line+char
+				vim.fn.cursor(en.line + 1, en.character + 1)
+			elseif button == "m" then
+				-- middle click to visual select node
+				vim.fn.cursor(st.line + 1, st.character + 1)
+				vim.cmd("normal v")
+				vim.fn.cursor(en.line + 1, en.character + 1)
+			end
+		end,
+	},
 })
 
 local M = {}
