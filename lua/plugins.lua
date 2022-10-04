@@ -10,6 +10,7 @@ packer.startup({
 		use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
 		-- lualine (新增)
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
+		use("arkav/lualine-lsp-progress")
 		-- telescope （新增）
 		use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 		-- telescope extensions
@@ -42,7 +43,7 @@ packer.startup({
 		use("nvim-telescope/telescope-dap.nvim")
 		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" }) -- go debug
 		use({ "mfussenegger/nvim-dap-python", requires = "mfussenegger/nvim-dap" }) -- python debug
-		use("sakhnik/nvim-gdb") -- lldb gdb
+		-- use("sakhnik/nvim-gdb") -- lldb gdb
 		--------------------git-----------------------
 		use("lewis6991/gitsigns.nvim")
 		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
@@ -71,7 +72,7 @@ packer.startup({
 		-- clangd nvim
 		use("p00f/clangd_extensions.nvim")
 		-- fidget
-		use("j-hui/fidget.nvim")
+		-- use("j-hui/fidget.nvim")
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
