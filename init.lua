@@ -61,6 +61,8 @@ require("plugin-config.symols-outline")
 require("dap.nvim-dap")
 require("dap.go") -- go
 require("dap.python") -- python
+require("dap.cpp.cpp")
+require("dap.lldb")
 
 -- 注释
 require("plugin-config.comment")
