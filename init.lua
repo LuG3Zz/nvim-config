@@ -90,3 +90,6 @@ require("plugin-config.typescript")
 
 -- clangd_extensions
 require("plugin-config.clangd_extensions")
+
+-- code_runner
+require("plugin-config.code_runner")

@@ -71,6 +71,8 @@ packer.startup({
 		use("jose-elias-alvarez/typescript.nvim")
 		-- clangd nvim
 		use("p00f/clangd_extensions.nvim")
+		-- code runner
+		use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- fidget
 		-- use("j-hui/fidget.nvim")
 		-- 补全引擎
