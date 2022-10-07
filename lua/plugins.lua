@@ -15,6 +15,12 @@ packer.startup({
     use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
       -- telescope extensions
       use ("LinArcX/telescope-env.nvim")
+    -- dashboard-nvim
+    use("glepnir/dashboard-nvim")
+    -- project
+    use("ahmedkhalf/project.nvim")
+    -- treesitter （新增）
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     ----------------------coc.nvim-------------------------
     use {'neoclide/coc.nvim', branch = 'release'}
     -------------------------------------------------------

@@ -22,5 +22,17 @@ require("plugin-config.lualine")
 -- telescope
 require("plugin-config.telescope")
 
+-- dashboard
+require("plugin-config.dashboard")
+
+-- project
+require("plugin-config.project")
+
+-- nvim-treesitter
+require("plugin-config.nvim-treesitter")
+
 -- coc
 require("plugin-config.coc")
+
+
+

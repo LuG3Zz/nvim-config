@@ -32,7 +32,6 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
-    "typescriptreact",
     "html",
     "css",
     "json",
@@ -40,15 +39,10 @@
     "go",
     "python",
     "vue",
-    "svelte",
     "c",
     "cpp",
-    "cs",
-    "racket",
-    "prisma"
+    "lua"
   ],
   "codeLens.enable": true,
-  "cSpell.userWords": [
-    "gonic"
-  ]
+  "cSpell.userWords": ["gonic"]
 }

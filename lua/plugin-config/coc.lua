@@ -1,5 +1,5 @@
 vim.cmd([[
-  let g:coc_global_extensions =['coc-json', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-docker', 'coc-emmet', 'coc-eslint', 'coc-git', 'coc-go', 'coc-golines', 'coc-highlight', 'coc-html', 'coc-htmlhint', 'coc-json', 'coc-lightbulb', 'coc-markdownlint', '@yaegassy/coc-nginx', 'coc-git', 'coc-prettier', 'coc-snippets', 'coc-sql', 'coc-spell-checker', 'coc-stylua', 'coc-sumneko-lua', 'coc-svg', '@yaegassy/coc-tailwindcss3', 'coc-tasks', 'coc-toml', 'coc-tsserver', '@yaegassy/coc-volar', 'coc-yaml', 'coc-translator', 'coc-protobuf', 'prismic-snippets', 'coc-marketplace', '@yaegassy/coc-volar-tools']
+  let g:coc_global_extensions =['coc-json', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-docker', 'coc-emmet', 'coc-eslint', 'coc-git', 'coc-go', 'coc-highlight', 'coc-html', 'coc-htmlhint', 'coc-json', 'coc-lightbulb', 'coc-markdownlint', '@yaegassy/coc-nginx', 'coc-git', 'coc-prettier', 'coc-snippets', 'coc-sql', 'coc-spell-checker', 'coc-stylua', 'coc-sumneko-lua', 'coc-svg', '@yaegassy/coc-tailwindcss3', 'coc-tasks', 'coc-toml', 'coc-tsserver', '@yaegassy/coc-volar', 'coc-yaml', 'coc-translator', 'coc-protobuf', 'prismic-snippets', 'coc-marketplace', '@yaegassy/coc-volar-tools']
 ]])
 
 
@@ -124,13 +124,13 @@ keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 -- Remap <C-f> and <C-b> for scroll float windows/popups.
 ---@diagnostic disable-next-line: redefined-local
 local opts = {silent = true, nowait = true, expr = true}
-keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
+-- keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
-keyset("i", "<C-f>",
-       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
+--keyset("i", "<C-f>",
+--       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
 keyset("i", "<C-b>",
        'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
-keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
+--keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
 
 
