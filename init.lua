@@ -1,16 +1,16 @@
--- 基础设置
+-- Basic Settings
 require("basic")
 
--- 快捷键映射
+-- shortcut keymap
 require("keybindings")
 
--- Packer 插件管理
+-- Packer plugin management
 require("plugins")
 
--- 主题设置
+-- Theme settings
 require("colorscheme")
 
--- 侧边文件浏览器
+-- side file browser
 require("plugin-config.nvim-tree")
 
 -- bufferline
@@ -60,3 +60,6 @@ require("plugin-config.todo-comments")
 
 -- colorizer
 require("plugin-config.nvim-colorizer")
+
+-- trouble
+require("plugin-config.trouble")

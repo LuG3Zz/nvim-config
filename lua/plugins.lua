@@ -1,83 +1,109 @@
 local packer = require("packer")
 packer.startup({
 	function(use)
-		-- Packer 可以管理自己本身
+		-- Packer manager self
 		use("wbthomason/packer.nvim")
-		-- nvim-tree
+		-- Nvim-tree
 		use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-		-- bufferline
+		-- Bufferline
 		use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
-		-- lualine
+		-- Lualine
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 		use("arkav/lualine-lsp-progress")
-		-- telescope
+		-- Telescope
 		use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
-		-- telescope extensions
-		use("LinArcX/telescope-env.nvim")
-		-- dashboard-nvim
+		-- Telescope extensions
+		use({ "LinArcX/telescope-env.nvim", requires = { "nvim-telescope/telescope.nvim" } })
+		-- Dashboard-nvim
 		use("glepnir/dashboard-nvim")
-		-- project
+		-- Project
 		use("ahmedkhalf/project.nvim")
-		-- treesitter
+		-- Treesitter
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-		-- lsp
-		use({
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"neovim/nvim-lspconfig",
-		})
-
-		-- 补全引擎
+		-- Portable package manager for Neovim that runs everywhere Neovim runs
+		use("williamboman/mason.nvim")
+		-- Quickstart configs for Nvim LSP
+		use("neovim/nvim-lspconfig")
+		-- Makes it easier to use lspconfig with mason.nvim
+		use({ "williamboman/mason-lspconfig.nvim", requires = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" } })
+		-- Completion engine
 		use("hrsh7th/nvim-cmp")
-		-- snippet 引擎
+		-- snippet engine
 		use("hrsh7th/vim-vsnip")
-		-- 补全源
+		-- snippet source
 		use("hrsh7th/cmp-vsnip")
 		use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
 		use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
 		use("hrsh7th/cmp-path") -- { name = 'path' }
 		use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
-
-		-- 常见编程语言代码段
+		-- Common programming language code snippets
 		use("rafamadriz/friendly-snippets")
-		-- ui
+		-- UI
 		use("onsails/lspkind-nvim")
-		-- indent-blankline
+		-- Indent-blankline
 		use("lukas-reineke/indent-blankline.nvim")
+		-- Lspsaga,a light-weight lsp plugin based on neovim's built-in lsp with a highly performant UI.
 		use("glepnir/lspsaga.nvim")
-		-- 代码格式化
+		-- Code format
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+		-- A bridge of mason and null-ts
 		use({
 			"jayp0521/mason-null-ls.nvim",
+			requires = { "jose-elias-alvarez/null-ls.nvim", "williamboman/mason.nvim" },
 		})
+		-- Debug Adapter Protocol client implementation for Neovim
 		use("mfussenegger/nvim-dap")
-		use("theHamsta/nvim-dap-virtual-text")
-		use("rcarriga/nvim-dap-ui")
-		use("jayp0521/mason-nvim-dap.nvim")
-		use("nvim-telescope/telescope-dap.nvim")
-		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" }) -- go debug
-		use({ "mfussenegger/nvim-dap-python", requires = "mfussenegger/nvim-dap" }) -- python debug
+		-- Dap extensions
+		use({ "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } })
+		-- Dap extensions
+		use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+		-- A bridge of mason and dap
+		use({ "jayp0521/mason-nvim-dap.nvim", requires = { "mfussenegger/nvim-dap", "williamboman/mason.nvim" } })
+		-- Telescope and dap extensions
+		use({
+			"nvim-telescope/telescope-dap.nvim",
+			requires = {
+				"nvim-telescope/telescope.nvim",
+				"mfussenegger/nvim-dap",
+			},
+		})
+		-- Dap extensions for go
+		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" })
+		-- Dap extensions for python
+		use({ "mfussenegger/nvim-dap-python", requires = "mfussenegger/nvim-dap" })
+		-- A tree like view for symbols in Neovim using the Language Server Protocol.
 		use("simrat39/symbols-outline.nvim")
+		-- Git integration for buffers
 		use("lewis6991/gitsigns.nvim")
-		use("numToStr/Comment.nvim") -- comment
-		use("windwp/nvim-autopairs") -- auto add pairs
-		use("voldikss/vim-floaterm") -- floaterm
-		use("voldikss/vim-translator") -- translator
-		use("Pocco81/auto-save.nvim") -- auto-save
+		-- Convenient	comment
+		use("numToStr/Comment.nvim")
+		-- Auto add pairs
+		use("windwp/nvim-autopairs")
+		-- Floaterm
+		use("voldikss/vim-floaterm")
+		-- Translator
+		use("voldikss/vim-translator")
+		-- Auto-save
+		use("Pocco81/auto-save.nvim")
+		-- Todo comment
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) --todocomment
-		use("norcalli/nvim-colorizer.lua") -- colorizer
+		-- Colorizer
+		use("norcalli/nvim-colorizer.lua")
+		-- Trouble list
+		use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
 
-		use("lewis6991/impatient.nvim") --inpatient
+		-- Improve startup time for Neovim
+		use("lewis6991/impatient.nvim")
 
 		--------------------- colorschemes --------------------
-		-- tokyonight
+		-- Tokyonight
 		use("folke/tokyonight.nvim")
 		-------------------------------------------------------
 	end,
 	config = {
-		-- 并发数限制
+		-- Concurrency limit
 		max_jobs = 16,
-		-- 自定义源
+		-- Custom source
 		git = {
 			-- default_url_format = "https://hub.fastgit.xyz/%s",
 			-- default_url_format = "https://mirror.ghproxy.com/https://github.com/%s",
@@ -92,7 +118,7 @@ packer.startup({
 	},
 })
 
--- 每次保存 plugins.lua 自动安装插件
+-- Automatically install plugins every time you save plugins.lua
 pcall(
 	vim.cmd,
 	[[
