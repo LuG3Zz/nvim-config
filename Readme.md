@@ -3,6 +3,7 @@
 ## what is this ?
 
 This is my neovim config, and 100% lua!
+
 And now it is can used on mainstream Linux distributions and widnows, all dependencies are modularized, you can easily use it on your computer after installing required external dependencies
 
 ## dependencies
@@ -45,6 +46,7 @@ nvim ~/.config/nvim/lua/plugins.lua
 ```
 
 And now let's type `:w`(Don't worry,his just entered the command mode and executed the save command )
+
 You can also achieve the same effect by using `ctrl+s`(you may want to know why `ctrl+s` is available, follow the guard!)
 
 4. Enjoy your self!
