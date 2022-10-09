@@ -1,5 +1,5 @@
 -- 基础设置
-require('basic')
+require("basic")
 
 -- 快捷键映射
 require("keybindings")
@@ -16,7 +16,7 @@ require("plugin-config.nvim-tree")
 -- bufferline
 require("plugin-config.bufferline")
 
--- lualine 
+-- lualine
 require("plugin-config.lualine")
 
 -- telescope
@@ -31,8 +31,31 @@ require("plugin-config.project")
 -- nvim-treesitter
 require("plugin-config.nvim-treesitter")
 
--- coc
-require("plugin-config.coc")
+-- mason
+require("plugin-config.mason")
 
+-- indent-blankline
+require("plugin-config.indent-blankline")
 
+-- Comment
+require("plugin-config.Comment")
 
+-- gitsigns
+require("plugin-config.gitsigns")
+
+-- symbols-outline
+require("plugin-config.symbols-outline")
+
+-- autopairs
+require("plugin-config.nvim-autopairs")
+
+-- impatient
+require("plugin-config.impatient")
+
+-- auto-save
+require("plugin-config.auto-save")
+
+-- todo Comment
+require("plugin-config.todo-comments")
+
+require("plugin-config.nvim-colorizer")
