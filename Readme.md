@@ -1,4 +1,5 @@
-<p align="center"> [中文]() </p>
+<p align="center"> [中文](https://github.com/jinzhongjia/neovim-config/blob/main/Readme_CN.md) </p>
+
 ## what is this ?
 
 This is my neovim config, and 100% lua!
