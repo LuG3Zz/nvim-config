@@ -2,38 +2,38 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local map = vim.api.nvim_set_keymap
--- 复用 opt 参数
+-- Multiplexing opt parameters
 local opt = { noremap = true, silent = true }
 
--- 取消 s 默认功能
+-- Cancel s default function
 map("n", "s", "", opt)
--- windows 分屏快捷键
+-- Windows split screen shortcuts
 map("n", "sv", ":vsp<CR>", opt)
 map("n", "sh", ":sp<CR>", opt)
--- 关闭当前
+-- Close current
 map("n", "sc", "<C-w>c", opt)
--- 关闭其他
+-- Close other
 map("n", "so", "<C-w>o", opt)
--- Alt + hjkl  窗口之间跳转
+-- Alt + hjkl jump between windows
 map("n", "<A-h>", "<C-w>h", opt)
 map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
--- 左右比例控制
+-- Left and right proportional control
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
 map("n", "s,", ":vertical resize -20<CR>", opt)
 map("n", "s.", ":vertical resize +20<CR>", opt)
--- 上下比例
+-- Up and down ratio
 map("n", "sj", ":resize +10<CR>", opt)
 map("n", "sk", ":resize -10<CR>", opt)
 map("n", "<C-Down>", ":resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
--- 等比例
+-- Ratio
 map("n", "s=", "<C-w>=", opt)
 
--- Terminal相关
+-- Terminal related
 map("n", "<leader>t", ":sp | terminal<CR>", opt)
 map("n", "<leader>vt", ":vsp | terminal<CR>", opt)
 map("t", "<A-s>", "<C-\\><C-n>", opt)
@@ -42,37 +42,37 @@ map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
 map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opt)
 map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opt)
 
--- visual模式下缩进代码
+-- Indent code in visual mode
 map("v", "<", "<gv", opt)
 map("v", ">", ">gv", opt)
--- 上下移动选中文本
+-- Move selected text up and down
 map("v", "J", ":move '>+1<CR>gv-gv", opt)
 map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
--- 上下滚动浏览
+-- Scroll up and down
 map("n", "<C-j>", "4j", opt)
 map("n", "<C-k>", "4k", opt)
--- ctrl u / ctrl + d  只移动9行，默认移动半屏
+-- Ctrl u / ctrl + d move only 9 lines, half screen by default
 map("n", "<C-u>", "9k", opt)
 map("n", "<C-d>", "9j", opt)
 
--- 在visual 模式里粘贴不要复制
+-- Paste without copying in visual mode
 map("v", "p", '"_dP', opt)
 
--- 退出
+-- Exit
 map("n", "q", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
 
--- insert 模式下，跳到行首行尾
+-- In insert mode, jump to the beginning of the line and the end of the line
 map("i", "<C-h>", "<ESC>I", opt)
 map("i", "<C-l>", "<ESC>A", opt)
 
--- ctrl+s保存
+-- ctrl+s save
 map("n", "<C-s>", ":w<CR>", opt)
 map("i", "<C-s>", "<ESC>:w<CR>", opt)
 
--- 配置复制快捷键
+-- Configure Copy Shortcuts
 map("v", "<C-c>", '"+y', opt) -- 复制
 map("v", "<C-x>", '"+d', opt) -- 剪切
 
@@ -80,10 +80,10 @@ map("v", "<C-x>", '"+d', opt) -- 剪切
 --------------------------------
 
 -- bufferline keybind
--- 左右Tab切换
+-- Left and right tab switching
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
--- 关闭
+-- Close
 --"moll/vim-bbye"
 map("n", "<C-w>", ":Bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
@@ -91,15 +91,15 @@ map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
--- 查找文件
+-- find files
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
--- 全局搜索
+-- Global search
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 
 -- symbols-outline
 map("n", "ol", ":SymbolsOutline<CR>", opt)
 
--- 悬浮终端 floaterm
+-- Floating terminal floaterm
 map("n", "ft", ":FloatermNew<CR>", opt)
 map("n", "fj", ":FloatermPrev<CR>", opt)
 map("n", "fk", ":FloatermNext<CR>", opt)
@@ -135,23 +135,23 @@ map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opt)
 --------------------------------
 --------------------------------
 
--- 插件快捷键
+-- Plugin Shortcuts
 local pluginKeys = {}
 
 -- nvim-tree
--- alt + m 键打开关闭tree
+-- alt + m key to open and close tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
--- 列表快捷键
+-- List shortcuts
 pluginKeys.nvimTreeList = {
-	-- 打开文件或文件夹
+	-- Open a file or folder
 	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-	-- 分屏打开文件
+	-- Split screen to open files
 	{ key = "v", action = "vsplit" },
 	{ key = "h", action = "split" },
-	-- 显示隐藏文件
-	{ key = "i", action = "toggle_custom" }, -- 对应 filters 中的 custom (node_modules)
+	-- show hidden files
+	{ key = "i", action = "toggle_custom" }, -- Corresponds to custom (node_modules) in filters
 	{ key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
-	-- 文件操作
+	-- file operations
 	{ key = "<F5>", action = "refresh" },
 	{ key = "a", action = "create" },
 	{ key = "d", action = "remove" },
@@ -162,20 +162,20 @@ pluginKeys.nvimTreeList = {
 	{ key = "s", action = "system_open" },
 }
 
--- Telescope 列表中 插入模式快捷键
+-- Insert mode shortcuts in the Telescope list
 pluginKeys.telescopeList = {
 	i = {
-		-- 上下移动
+		-- Moving up and down
 		["<C-j>"] = "move_selection_next",
 		["<C-k>"] = "move_selection_previous",
 		["<Down>"] = "move_selection_next",
 		["<Up>"] = "move_selection_previous",
-		-- 历史记录
+		-- history record
 		["<C-n>"] = "cycle_history_next",
 		["<C-p>"] = "cycle_history_prev",
-		-- 关闭窗口
+		-- close the window
 		["<C-c>"] = "close",
-		-- 预览窗口上下滚动
+		-- The preview window scrolls up and down
 		["<C-u>"] = "preview_scrolling_up",
 		["<C-d>"] = "preview_scrolling_down",
 	},
@@ -215,7 +215,7 @@ pluginKeys.mapLSP = function(mapbuf)
 	-- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
 
--- nvim-cmp 自动补全
+-- nvim-cmp autocompletion
 pluginKeys.cmp = function(cmp)
 	local feedkey = function(key, mode)
 		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
@@ -226,33 +226,33 @@ pluginKeys.cmp = function(cmp)
 		return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 	end
 	return {
-		-- 出现补全
+		-- Completion appears
 		["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-		-- 取消
+		-- Cancel
 		["<A-,>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		-- 上一个
+		-- Prev
 		["<C-k>"] = cmp.mapping.select_prev_item(),
-		-- 下一个
+		-- Next
 		["<C-j>"] = cmp.mapping.select_next_item(),
-		-- 确认
+		-- confirm
 		["<CR>"] = cmp.mapping.confirm({
 			select = true,
 			behavior = cmp.ConfirmBehavior.Replace,
 		}),
-		-- 如果窗口内容太多，可以滚动
+		-- Scrolling if the window has too much content
 		["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
 		["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-		-- 自定义代码段跳转到下一个参数
+		-- Custom code snippet to jump to next parameter
 		["<C-l>"] = cmp.mapping(function(_)
 			if vim.fn["vsnip#available"](1) == 1 then
 				feedkey("<Plug>(vsnip-expand-or-jump)", "")
 			end
 		end, { "i", "s" }),
 
-		-- 自定义代码段跳转到上一个参数
+		-- Custom code snippet to jump to the previous parameter
 		["<C-h>"] = cmp.mapping(function()
 			if vim.fn["vsnip#jumpable"](-1) == 1 then
 				feedkey("<Plug>(vsnip-jump-prev)", "")
@@ -285,9 +285,9 @@ end
 
 -- nvim-dap
 pluginKeys.mapDAP = function()
-	-- 开始
+	-- Begin
 	map("n", "<leader>dd", ":lua require('dap').continue()<CR>", opt)
-	-- 结束 (dapui无法自动关闭可能是bug，手动关闭能想到的一切)
+	-- Stop
 	map(
 		"n",
 		"<leader>de",
@@ -299,16 +299,16 @@ pluginKeys.mapDAP = function()
 			.. "<C-w>o<CR>",
 		opt
 	)
-	-- 继续
+	-- Continue
 	map("n", "<leader>dc", ":lua require'dap'.continue()<CR>", opt)
-	-- 设置断点
+	-- Set BreakPoint
 	map("n", "<leader>dt", ":lua require('dap').toggle_breakpoint()<CR>", opt)
 	map("n", "<leader>dT", ":lua require('dap').clear_breakpoints()<CR>", opt)
 	--  stepOver, stepOut, stepInto
 	map("n", "<leader>dj", ":lua require'dap'.step_over()<CR>", opt)
 	map("n", "<leader>dk", ":lua require'dap'.step_out()<CR>", opt)
 	map("n", "<leader>dl", ":lua require'dap'.step_into()<CR>", opt)
-	-- 弹窗
+	-- Pop-ups
 	map("n", "<leader>dh", ":lua require'dapui'.eval()<CR>", opt)
 end
 
