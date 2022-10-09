@@ -1,19 +1,51 @@
+<p align="center"> [中文]() </p>
 ## what is this ?
 
-this is my neovim config, and 100% lua!
+This is my neovim config, and 100% lua!
+And now it is can used on mainstream Linux distributions and widnows, all dependencies are modularized, you can easily use it on your computer after installing required external dependencies
 
-## notice
+## dependencies
 
-now, many dependent packages are installed by nixos's pkgs manager, if you want to use my config, you maybe need to install dependence manually!
+It is recommended to use the system's package manager to install the following dependencies
 
-I will list the required dependencies in a while, you can install the required dependencies according to this very convenient!
+- [Nerd fonts](https://www.nerdfonts.com/font-downloads)
+- [git](https://git-scm.com/downloads)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [fd](https://github.com/sharkdp/fd)
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [lazydocker](https://github.com/jesseduffield/lazydocker)
 
-## 这是什么？
+## QuickStart
 
-这是我个人所使用的 neovim 配置，配置文件均为 lua，并无 vimscript！
+1.  Install `Neovim` packer manager
 
-## 注意
+First, you nedd to install `packer.nvim`(a neovim package manager), you can learn it from [here](https://github.com/wbthomason/packer.nvim#quickstart)
 
-由于我现在所使用的系统是 nixos，并没有配置专门的 lsp server 管理器，lsp server 均通过 nixos 的 configuration 安装，如果你想使用我的配置，你需要自行安装这些 lsp server！
+2. Git clone configuration to local
 
-我之后会整理出一份 lsp server 的名单，还有依赖的 fomatter，只要安装完这些依赖，然后 git clone 该配置，安装好 packer.nvim 后进入 nvim 的配置文件直接保存即可自动安装所有插件
+Then you clone this config with command:
+
+> Unix, Linux
+
+```bash
+# This will git clone the neovim-config to your system path
+git clone https://github.com/jinzhongjia/neovim-config ~/.local/nvim
+```
+
+3.Init to auto install plugins
+
+Now, you use neovim open this file`~/.local/nvim/lua/plugins.lua`(this file is your plugins config) through the following command
+
+> Unix, Linux
+
+```bash
+nvim ~/.config/nvim/lua/plugins.lua
+
+```
+
+And now let's type `:w`(Don't worry,his just entered the command mode and executed the save command )
+You can also achieve the same effect by using `ctrl+s`(you may want to know why `ctrl+s` is available, follow the guard!)
+
+4. Enjoy your self!
+
+Now, you have config `Neovim` completely, enjoy it!

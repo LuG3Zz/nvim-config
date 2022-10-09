@@ -11,7 +11,7 @@ local servers = {
   "html",
   "jsonls",
   "tsserver",
-  "zk",
+  "marksman",
   -- "psalm",
   -- "powershell_es",
   "pyright",
