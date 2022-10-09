@@ -58,4 +58,5 @@ require("plugin-config.auto-save")
 -- todo Comment
 require("plugin-config.todo-comments")
 
+-- colorizer
 require("plugin-config.nvim-colorizer")
