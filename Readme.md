@@ -1,4 +1,4 @@
-<p align="center"> [中文](https://github.com/jinzhongjia/neovim-config/blob/main/Readme_CN.md) </p>
+<p align="center"> <a href="https://github.com/jinzhongjia/neovim-config/blob/main/Readme_CN.md">中文</a> </p>
 
 ## what is this ?
 
