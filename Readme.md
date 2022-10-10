@@ -19,11 +19,11 @@ It is recommended to use the system's package manager to install the following d
 
 ## QuickStart
 
-1.  Install `Neovim` packer manager
+1. **Install `Neovim` packer manager**
 
 First, you nedd to install `packer.nvim`(a neovim package manager), you can learn it from [here](https://github.com/wbthomason/packer.nvim#quickstart)
 
-2. Git clone configuration to local
+2. **Git clone configuration to local**
 
 Then you clone this config with command:
 
@@ -34,7 +34,7 @@ Then you clone this config with command:
 git clone https://github.com/jinzhongjia/neovim-config ~/.local/nvim
 ```
 
-3. Init to auto install plugins
+3. **Init to auto install plugins**
 
 Now, you use neovim open this file`~/.local/nvim/lua/plugins.lua`(this file is your plugins config) through the following command
 
@@ -49,6 +49,6 @@ And now let's type `:w`(Don't worry,his just entered the command mode and execut
 
 You can also achieve the same effect by using `ctrl+s`(you may want to know why `ctrl+s` is available, follow the guard!)
 
-4. Enjoy your self!
+4. **Enjoy your self!**
 
 Now, you have config `Neovim` completely, enjoy it!
