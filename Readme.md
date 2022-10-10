@@ -34,7 +34,7 @@ Then you clone this config with command:
 git clone https://github.com/jinzhongjia/neovim-config ~/.local/nvim
 ```
 
-3.Init to auto install plugins
+3. Init to auto install plugins
 
 Now, you use neovim open this file`~/.local/nvim/lua/plugins.lua`(this file is your plugins config) through the following command
 
