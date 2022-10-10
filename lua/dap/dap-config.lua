@@ -4,7 +4,7 @@ require("nvim-dap-virtual-text").setup({
 	commented = true,
 })
 
--- 定义各种图标
+-- Define various icons
 
 vim.fn.sign_define("DapBreakpoint", {
 	text = "◉",
@@ -82,5 +82,5 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close({})
 end
 
--- 绑定 nvim-dap 快捷键
+-- Bind nvim-dap shortcuts
 require("keybindings").mapDAP()

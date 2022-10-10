@@ -1,28 +1,28 @@
 local status, telescope = pcall(require, "telescope")
 if not status then
-	vim.notify("没有找到 telescope")
+	vim.notify("not found telescope")
 	return
 end
 
 telescope.setup({
 	defaults = {
-		-- 打开弹窗后进入的初始模式，默认为 insert，也可以是 normal
+		-- The initial mode entered after opening the pop-up window, the default is insert, it can also be normal
 		initial_mode = "insert",
-		-- 窗口内快捷键
+		-- Shortcut keys in the window
 		mappings = require("keybindings").telescopeList,
 	},
 	pickers = {
-		-- 内置 pickers 配置
+		-- Built-in pickers configuration
 		find_files = {
-			-- 查找文件换皮肤，支持的参数有： dropdown, cursor, ivy
+			-- Find files for skinning, supported parameters are: dropdown, cursor, ivy
 			-- theme = "dropdown",
 		},
 	},
 	extensions = {
-		-- 扩展插件配置
+		-- Extensions
 	},
 })
 
--- telescope extensions
+-- Telescope extensions
 pcall(telescope.load_extension, "env")
 pcall(telescope.load_extension, "dap")

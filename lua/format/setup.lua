@@ -33,29 +33,29 @@ mason_null_ls.setup_handlers({
 	gofumpt = function()
 		null_ls.register(null_ls.builtins.formatting.gofumpt)
 	end,
-		goimports = function()
-			null_ls.register(null_ls.builtins.formatting.goimports)
-		end,
-		golines = function()
-			null_ls.register(null_ls.builtins.formatting.golines)
-		end,
+	goimports = function()
+		null_ls.register(null_ls.builtins.formatting.goimports)
+	end,
+	golines = function()
+		null_ls.register(null_ls.builtins.formatting.golines)
+	end,
 	jq = function()
 		null_ls.register(null_ls.builtins.formatting.jq)
 	end,
-		staticcheck = function()
-			null_ls.register(null_ls.builtins.diagnostics.staticcheck)
-		end,
-		eslint_d = function()
-			null_ls.register(null_ls.builtins.code_actions.eslint_d)
-		end,
-		shellcheck = function()
-			null_ls.register(null_ls.builtins.code_actions.shellcheck)
-		end,
+	staticcheck = function()
+		null_ls.register(null_ls.builtins.diagnostics.staticcheck)
+	end,
+	eslint_d = function()
+		null_ls.register(null_ls.builtins.code_actions.eslint_d)
+	end,
+	shellcheck = function()
+		null_ls.register(null_ls.builtins.code_actions.shellcheck)
+	end,
 })
 
 null_ls.setup({
 	debug = false,
-	-- 保存自动格式化
+	-- save auto format
 	on_attach = function(client)
 		if client.server_capabilities.documentFormattingProvider then
 			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")

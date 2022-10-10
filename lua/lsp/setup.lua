@@ -15,9 +15,9 @@ local servers = {
   -- "psalm",
   -- "powershell_es",
   "pyright",
-  "sqls", -- 需要额外的yaml配置
+  "sqls", -- need extra yaml configuration
   "tailwindcss",
-  "volar", -- 可以进行定制，覆盖默认的tsserver
+  "volar", -- Can be customized to override the default tsserver
 }
 local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
@@ -27,7 +27,7 @@ local servers_handlers = {}
 for _, value in pairs(servers) do
   local status, config = pcall(require, "lsp.config." .. value)
   if not status then
-    vim.notify("lsp配置文件没有找到 " .. value)
+    vim.notify("lsp configuration not found" .. value)
     goto continue
   end
   servers_handlers[value]=function()
@@ -43,9 +43,9 @@ mason_lspconfig.setup({
 mason_lspconfig.setup_handlers(servers_handlers)
 
 
--- 代码补全
+-- Code completion
 require("lsp.cmp")
 
--- ui补全
+-- ui completion
 require("lsp.ui")
 

@@ -1,60 +1,58 @@
 local status, nvim_tree = pcall(require, "nvim-tree")
 if not status then
-    vim.notify("没有找到 nvim-tree")
-  return
+	vim.notify("not found nvim-tree")
+	return
 end
 
--- 列表操作快捷键
-local list_keys = require('keybindings').nvimTreeList
+-- List operation shortcuts
+local list_keys = require("keybindings").nvimTreeList
 nvim_tree.setup({
-    -- 不显示 git 状态图标
-    git = {
-        enable = false,
-    },
-    -- project plugin 需要这样设置
-    update_cwd = true,
-    update_focused_file = {
-        enable = true,
-        update_cwd = true,
-    },
-    -- 隐藏 .文件 和 node_modules 文件夹
-    filters = {
-        dotfiles = true,
-        custom = { 'node_modules' },
-    },
-    view = {
-        -- 宽度
-        width = 40,
-        -- 也可以 'right'
-        side = 'left',
-        -- 隐藏根目录
-        hide_root_folder = false,
-        -- 自定义列表中快捷键
-        mappings = {
-            custom_only = false,
-            list = list_keys,
-        },
-        -- 不显示行数
-        number = false,
-        relativenumber = false,
-        -- 显示图标
-        signcolumn = 'yes',
-    },
-    actions = {
-        open_file = {
-            -- 首次打开大小适配
-            resize_window = true,
-            -- 打开文件时关闭
-            quit_on_open = true,
-        },
-    },
-    -- wsl install -g wsl-open
-    -- https://github.com/4U6U57/wsl-open/
-    system_open = {
-        cmd = '', -- mac 直接设置为 open
-    },
+	-- Don't show git status icons
+	git = {
+		enable = false,
+	},
+	-- project plugin needs to be set like this
+	update_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+	},
+	-- Hide .files and node_modules folders
+	filters = {
+		dotfiles = true,
+		custom = { "node_modules" },
+	},
+	view = {
+		-- Width
+		width = 40,
+		-- 'right' is ok
+		side = "left",
+		-- hide root directory
+		hide_root_folder = false,
+		-- Shortcut keys in custom lists
+		mappings = {
+			custom_only = false,
+			list = list_keys,
+		},
+		-- Don't show row count
+		number = false,
+		relativenumber = false,
+		-- Show icon
+		signcolumn = "yes",
+	},
+	actions = {
+		open_file = {
+			-- Open size fit for the first time
+			resize_window = true,
+			-- Close when file is opened
+			quit_on_open = true,
+		},
+	},
+	system_open = {
+		cmd = "",
+	},
 })
--- 自动关闭
+-- Auto close
 vim.cmd([[
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 ]])

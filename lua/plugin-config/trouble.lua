@@ -1,6 +1,6 @@
 local status, trouble = pcall(require, "trouble")
 if not status then
-	vim.notify("没有找到 trouble")
+	vim.notify("not found trouble")
 	return
 end
 

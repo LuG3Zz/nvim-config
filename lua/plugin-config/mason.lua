@@ -1,7 +1,7 @@
 -- 如果找不到lualine 组件，就不继续执行
 local status, mason = pcall(require, "mason")
 if not status then
-	vim.notify("没有找到 mason")
+	vim.notify("not found mason")
 	return
 end
 

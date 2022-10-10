@@ -1,19 +1,19 @@
 local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status then
-	vim.notify("没有找到 nvim-treesitter")
+	vim.notify("not found nvim-treesitter")
 	return
 end
 
 treesitter.setup({
-	-- 安装 language parser
-	-- :TSInstallInfo 命令查看支持的语言
+	-- Install language parser
+	-- :TSInstallInfo command to view supported languages
 	ensure_installed = "all",
-	-- 启用代码高亮模块
+	-- Enable code highlighting module
 	highlight = {
 		enable = true,
 		additional_vim_regex_highlighting = false,
 	},
-	-- 启用增量选择模块
+	-- Enable incremental selection module
 	incremental_selection = {
 		enable = true,
 		keymaps = {
@@ -23,15 +23,15 @@ treesitter.setup({
 			scope_incremental = "<TAB>",
 		},
 	},
-	-- 启用代码缩进模块 (=)
+	-- Enable code indentation module (=)
 	indent = {
 		enable = true,
 	},
 })
 
--- 开启 Folding 模块
+-- Open the Folding module
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- 默认不要折叠
+-- Do not fold by default
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.opt.foldlevel = 99
