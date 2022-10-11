@@ -17,7 +17,7 @@
 
 1. **安装`neovim`包管理器**
 
-这里使用的包管理器为`packer.nvim`, 安装步骤在这里不详细赘述，可以参考(这里)[https://github.com/wbthomason/packer.nvim#quickstart]
+这里使用的包管理器为`packer.nvim`, 安装步骤在这里不详细赘述，可以参考[这里](https://github.com/wbthomason/packer.nvim#quickstart)
 
 2. **Gie clone 配置文件到本地**
 

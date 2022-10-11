@@ -10,6 +10,7 @@ mason_null_ls.setup({
 		"golines",
 		"staticcheck",
 		"eslint_d",
+		"markdownlint",
 		"prettier",
 		"shellcheck",
 		"stylua",
@@ -50,6 +51,10 @@ mason_null_ls.setup_handlers({
 	end,
 	shellcheck = function()
 		null_ls.register(null_ls.builtins.code_actions.shellcheck)
+	end,
+	markdownlint = function()
+		null_ls.register(null_ls.builtins.diagnostics.markdownlint)
+		null_ls.register(null_ls.builtins.formatting.markdownlint)
 	end,
 })
 
