@@ -1,6 +1,6 @@
-<p align="center"> <a href="https://github.com/jinzhongjia/neovim-config/blob/main/Readme_CN.md">中文</a> </p>
+# what is this ?
 
-## what is this ?
+<p align="center"> <a href="https://github.com/jinzhongjia/neovim-config/blob/main/Readme_CN.md">中文</a> </p>
 
 This is my neovim config, and 100% lua!
 
