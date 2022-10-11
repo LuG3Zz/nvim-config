@@ -55,6 +55,9 @@ mason_null_ls.setup_handlers({
 
 null_ls.setup({
 	debug = false,
+	sources = {
+		null_ls.builtins.code_actions.gitsigns,
+	},
 	-- save auto format
 	on_attach = function(client)
 		if client.server_capabilities.documentFormattingProvider then
