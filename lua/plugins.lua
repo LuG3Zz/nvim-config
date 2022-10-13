@@ -20,6 +20,7 @@ packer.startup({
 		use("ahmedkhalf/project.nvim")
 		-- Treesitter
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+		use({ "nvim-treesitter/nvim-treesitter-context", requires = { "nvim-treesitter/nvim-treesitter" } })
 		-- Portable package manager for Neovim that runs everywhere Neovim runs
 		use("williamboman/mason.nvim")
 		-- Quickstart configs for Nvim LSP
@@ -36,6 +37,9 @@ packer.startup({
 		use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
 		use("hrsh7th/cmp-path") -- { name = 'path' }
 		use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+		use("hrsh7th/cmp-nvim-lsp-document-symbol") -- { name = 'nvim_lsp_document_symbol' }
+		use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
+		use("ray-x/cmp-treesitter") -- {name = 'treesitter'}
 		-- Common programming language code snippets
 		use("rafamadriz/friendly-snippets")
 		-- UI

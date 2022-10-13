@@ -63,3 +63,6 @@ require("plugin-config.nvim-colorizer")
 
 -- trouble
 require("plugin-config.trouble")
+
+-- nvim-treesitter-context
+require("plugin-config.nvim-treesitter-context")
