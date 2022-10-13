@@ -7,7 +7,6 @@
 - rcarriga/cmp-dap 给 dap 使用的补全
 - potamides/pantran.nvim 很强的翻译插件
 - nvim-treesitter/nvim-treesitter-textobjects 扩展
-- folke/twilight.nvim 只高亮当前的活动部分
 - xiyaowong/nvim-transparent nvim 背景透明插件
 - nvim-colortils/colortils.nvim 提供颜色转换功能
 - projekt0n/github-nvim-theme github 主题
