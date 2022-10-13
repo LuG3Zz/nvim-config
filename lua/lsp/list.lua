@@ -1,7 +1,7 @@
 local servers = {
 	"sumneko_lua",
 	"clangd",
-	"asm_lsp",
+	-- "asm_lsp",
 	"bashls",
 	"cmake",
 	"cssls",

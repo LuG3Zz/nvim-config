@@ -91,6 +91,7 @@ packer.startup({
 		use("norcalli/nvim-colorizer.lua")
 		-- Trouble list
 		use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
+		--
 
 		-- Improve startup time for Neovim
 		use("lewis6991/impatient.nvim")
@@ -98,6 +99,7 @@ packer.startup({
 		--------------------- colorschemes --------------------
 		-- Tokyonight
 		use("folke/tokyonight.nvim")
+		use("projekt0n/github-nvim-theme")
 		-------------------------------------------------------
 	end,
 	config = {
