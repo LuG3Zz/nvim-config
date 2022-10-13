@@ -319,6 +319,11 @@ _G.packer_plugins = {
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "/home/jin/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/vim-bbye",
@@ -338,6 +343,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jin/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/jin/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

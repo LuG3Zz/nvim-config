@@ -66,3 +66,9 @@ require("plugin-config.trouble")
 
 -- nvim-treesitter-context
 require("plugin-config.nvim-treesitter-context")
+
+-- twilight
+require("plugin-config.twilight")
+
+-- zen-mode
+require("plugin-config.zen-mode")

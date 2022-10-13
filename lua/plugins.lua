@@ -95,7 +95,10 @@ packer.startup({
 		use("norcalli/nvim-colorizer.lua")
 		-- Trouble list
 		use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
-		--
+		-- Dims inactive portions of the code you're editing
+		use("folke/twilight.nvim")
+		-- Zen-mode
+		use("folke/zen-mode.nvim")
 
 		-- Improve startup time for Neovim
 		use("lewis6991/impatient.nvim")
