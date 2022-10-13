@@ -13,5 +13,6 @@
 - projekt0n/github-nvim-theme github 主题
 - stevearc/overseer.nvim 构建任务
 - pwntester/octo.nvim github 集成
+- folke/noice.nvim 很花哨的插件，用于覆盖默认的消息通知功能,追求美观的可以尝试，可能会降低一部分阅读代码的效率
 
 ## here is plugin which will be installed
