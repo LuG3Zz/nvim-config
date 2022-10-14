@@ -10,6 +10,7 @@ local servers = {
 	"gopls",
 	"html",
 	"jsonls",
+	"rust_analyzer",
 	"tsserver",
 	-- "psalm",
 	-- "powershell_es",
