@@ -13,6 +13,7 @@ mason_dap.setup({
 		"delve",
 		"node2",
 		"cppdbg",
+		"js",
 	},
 })
 
@@ -25,3 +26,5 @@ mason_dap.setup_handlers({
 require("dap.config.go")
 -- debug depend nvim-dap-python
 require("dap.config.python")
+-- debug depend nvim-dap-vscode-js
+require("dap.config.js")

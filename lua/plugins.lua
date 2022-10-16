@@ -62,7 +62,7 @@ packer.startup({
 		-- Dap extensions
 		use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 		-- A bridge of mason and dap
-		use({ "jayp0521/mason-nvim-dap.nvim", requires = { "mfussenegger/nvim-dap", "williamboman/mason.nvim" } })
+		use({ "jinzhongjia/mason-nvim-dap.nvim", requires = { "mfussenegger/nvim-dap", "williamboman/mason.nvim" } })
 		-- Telescope and dap extensions
 		use({
 			"nvim-telescope/telescope-dap.nvim",
@@ -73,6 +73,8 @@ packer.startup({
 		})
 		-- Dap extensions for go
 		use({ "leoluz/nvim-dap-go", requires = "mfussenegger/nvim-dap" })
+		-- Dap extensions for js
+		use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
 		-- Dap extensions for python
 		use({ "mfussenegger/nvim-dap-python", requires = "mfussenegger/nvim-dap" })
 		-- A tree like view for symbols in Neovim using the Language Server Protocol.
