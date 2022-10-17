@@ -1,4 +1,4 @@
--- 如果找不到lualine 组件，就不继续执行
+-- If the mason component is not found, do not continue execution
 local status, mason = pcall(require, "mason")
 if not status then
 	vim.notify("not found mason")
@@ -17,6 +17,6 @@ mason.setup({
 
 require("lsp.setup")
 
-require("format.setup")
+require("null-ts.setup")
 
 require("dap.setup")
