@@ -15,6 +15,7 @@ mason_null_ls.setup({
 		"shellcheck",
 		"stylua",
 		"jq",
+		"shfmt",
 	},
 })
 
@@ -55,6 +56,9 @@ mason_null_ls.setup_handlers({
 	markdownlint = function()
 		null_ls.register(null_ls.builtins.diagnostics.markdownlint)
 		null_ls.register(null_ls.builtins.formatting.markdownlint)
+	end,
+	shfmt = function()
+		null_ls.register(null_ls.builtins.formatting.shfmt)
 	end,
 })
 
