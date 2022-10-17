@@ -1,3 +1,5 @@
+local dap_util = require("dap.util")
+
 local status, dap = pcall(require, "dap")
 if not status then
 	vim.notify("not found nvim-dap")
@@ -8,7 +10,7 @@ local config = function()
 	dap.adapters.cppdbg = {
 		id = "cppdbg",
 		type = "executable",
-		command = os.getenv("HOME") .. "/.local/share/nvim/mason/bin/OpenDebugAD7",
+		command = dap_util.mason_module_dir .. "/bin/OpenDebugAD7",
 	}
 	dap.configurations.cpp = {
 		{
@@ -27,7 +29,7 @@ local config = function()
 			request = "launch",
 			MIMode = "gdb",
 			miDebuggerServerAddress = "localhost:1234",
-			miDebuggerPath = "/usr/bin/gdb",
+			-- miDebuggerPath = "/usr/bin/gdb",
 			cwd = "${workspaceFolder}",
 			program = function()
 				return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
