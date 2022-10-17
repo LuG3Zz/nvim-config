@@ -16,7 +16,7 @@ mason_null_ls.setup({
 		"stylua",
 		"jq",
 		"shfmt",
-		"cspell",
+		-- "cspell",
 	},
 })
 
@@ -61,10 +61,10 @@ mason_null_ls.setup_handlers({
 	shfmt = function()
 		null_ls.register(null_ls.builtins.formatting.shfmt)
 	end,
-	cspell = function()
-		null_ls.register(null_ls.builtins.diagnostics.cspell)
-		null_ls.register(null_ls.builtins.code_actions.cspell)
-	end,
+	-- cspell = function()
+	-- 	null_ls.register(null_ls.builtins.diagnostics.cspell)
+	-- 	null_ls.register(null_ls.builtins.code_actions.cspell)
+	-- end,
 })
 
 null_ls.setup({
