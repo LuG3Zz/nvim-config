@@ -70,7 +70,7 @@ vim.o.list = true
 vim.o.listchars = "space:·,tab:··"
 -- Completion enhancement
 vim.o.wildmenu = true
--- Dont' pass messages to |ins-completin menu|
+-- Don't pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. "c"
 -- Completion displays up to 10 lines
 vim.o.pumheight = 10

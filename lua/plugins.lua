@@ -110,6 +110,7 @@ packer.startup({
 		-- Tokyonight
 		use("folke/tokyonight.nvim")
 		use("projekt0n/github-nvim-theme")
+		use("EdenEast/nightfox.nvim")
 		-------------------------------------------------------
 	end,
 	config = {
