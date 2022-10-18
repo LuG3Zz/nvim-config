@@ -3,6 +3,7 @@ if not status then
 	vim.notify("not found nvim-dap")
 	return
 end
+
 -- import dap's config
 require("dap.dap-config")
 
