@@ -18,6 +18,10 @@ local list = {
 	{ "stylua", { formatting } },
 	{ "jq", { formatting } },
 	{ "shfmt", { formatting } },
+	{ "codespell", { diagnostics } },
+	{ "hadolint", { diagnostics } },
+	{ "haml_lint", { diagnostics } },
+	{ "dprint", { formatting } },
 }
 
 return list
