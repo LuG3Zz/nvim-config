@@ -19,7 +19,11 @@ packer.startup({
 		-- Project
 		use("ahmedkhalf/project.nvim")
 		-- Treesitter
-		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+		use({
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate",
+			-- commit = "addc129a4f272aba0834bd0a7b6bd4ad5d8c801b",
+		})
 		use({ "nvim-treesitter/nvim-treesitter-context", requires = { "nvim-treesitter/nvim-treesitter" } })
 		use({ "nvim-treesitter/playground", requires = { "nvim-treesitter/nvim-treesitter" } })
 		-- Portable package manager for Neovim that runs everywhere Neovim runs
