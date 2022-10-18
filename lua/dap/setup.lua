@@ -19,7 +19,7 @@ mason_dap.setup({
 
 -- config dap
 mason_dap.setup_handlers({
-	cppdbg = require("dap.config.cpp"),
+	cppdbg = require("dap.config.cpptools"),
 })
 
 -- debug depend nvim-dap-go

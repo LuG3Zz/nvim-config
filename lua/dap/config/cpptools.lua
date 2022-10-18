@@ -21,7 +21,18 @@ local config = function()
 				return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
 			end,
 			cwd = "${workspaceFolder}",
-			stopAtEntry = true,
+			stopAtEntry = false,
+			linux = {
+				MIMode = "gdb",
+				miDebuggerPath = "/usr/bin/gdb",
+			},
+			osx = {
+				MIMode = "lldb",
+			},
+			windows = {
+				MIMode = "gdb",
+				miDebuggerPath = "C:\\MinGw\\bin\\gdb.exe",
+			},
 		},
 		{
 			name = "Attach to gdbserver :1234",
@@ -30,12 +41,25 @@ local config = function()
 			MIMode = "gdb",
 			miDebuggerServerAddress = "localhost:1234",
 			-- miDebuggerPath = "/usr/bin/gdb",
+			linux = {
+				MIMode = "gdb",
+				miDebuggerPath = "/usr/bin/gdb",
+			},
+			osx = {
+				MIMode = "lldb",
+			},
+			windows = {
+				MIMode = "gdb",
+				miDebuggerPath = "C:\\MinGw\\bin\\gdb.exe",
+			},
 			cwd = "${workspaceFolder}",
 			program = function()
 				return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
 			end,
 		},
 	}
+	dap.configurations.c = dap.configurations.cpp
+	dap.configurations.rust = dap.configurations.cpp
 end
 
 return config

@@ -21,7 +21,7 @@ local list = {
 	{ "codespell", { diagnostics } },
 	{ "hadolint", { diagnostics } },
 	{ "haml_lint", { diagnostics } },
-	{ "dprint", { formatting } },
+	-- { "dprint", { formatting } },
 }
 
 return list
