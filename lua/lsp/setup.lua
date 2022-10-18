@@ -4,6 +4,8 @@ local lspconfig = require("lspconfig")
 
 local servers_handlers = {}
 
+local default_config=require("lsp.default-config")
+
 for _, value in pairs(servers) do
   local status, config = pcall(require, "lsp.config." .. value)
   if not status then
@@ -11,7 +13,7 @@ for _, value in pairs(servers) do
     goto continue
   end
   servers_handlers[value]=function()
-    lspconfig[value].setup(config)
+    lspconfig[value].setup(vim.tbl_deep_extend("force",default_config,config))
   end
   ::continue::
 end
