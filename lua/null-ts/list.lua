@@ -21,6 +21,8 @@ local list = {
 	{ "codespell", { diagnostics } },
 	{ "hadolint", { diagnostics } },
 	{ "haml_lint", { diagnostics } },
+	{ "black", { formatting } },
+	{ "isort", { formatting } },
 	-- { "dprint", { formatting } },
 }
 
