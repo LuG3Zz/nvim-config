@@ -2,7 +2,17 @@ local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-local opts = {
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status then
+	vim.notify("not found cmp_nvim_lsp")
+	return
+end
+
+local opt = {
+	capabilities = cmp_nvim_lsp.default_capabilities(capabilities),
 	settings = {
 		Lua = {
 			runtime = {
@@ -43,4 +53,4 @@ local opts = {
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
 	end,
 }
-return opts
+return opt

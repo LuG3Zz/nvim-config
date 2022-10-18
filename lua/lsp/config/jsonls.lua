@@ -1,9 +1,23 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status then
+	vim.notify("not found cmp_nvim_lsp")
+	return
+end
+
+local status, schemastore = pcall(require, "schemastore")
+if not status then
+	vim.notify("not found cmp_nvim_lsp")
+	return
+end
+
 local opt = {
-	capabilities = capabilities,
-	settings = {},
+	capabilities = cmp_nvim_lsp.default_capabilities(capabilities),
+	settings = {
+		schemas = schemastore.json.schemas(),
+	},
 	flags = {
 		debounce_text_changes = 150,
 	},

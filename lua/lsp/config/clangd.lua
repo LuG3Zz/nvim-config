@@ -1,4 +1,13 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status then
+	vim.notify("not found cmp_nvim_lsp")
+	return
+end
 local opt = {
+	capabilities = cmp_nvim_lsp.default_capabilities(capabilities),
 	settings = {},
 	cmd = { "clangd", "--offset-encoding=utf-16" },
 	flags = {

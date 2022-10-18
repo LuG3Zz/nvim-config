@@ -47,6 +47,8 @@ packer.startup({
 		use("ray-x/cmp-treesitter") -- {name = 'treesitter'}
 		-- Common programming language code snippets
 		use("rafamadriz/friendly-snippets")
+		-- JSON enhance
+		use("b0o/schemastore.nvim")
 		-- UI
 		use("onsails/lspkind-nvim")
 		-- Indent-blankline
