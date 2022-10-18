@@ -1,19 +1,19 @@
 local list = {
 	{
 		name = "python",
-		part = true,
+		alone = true,
 	},
 	{
 		name = "delve",
-		part = true,
+		alone = true,
 	},
 	{
 		name = "cppdbg",
-		part = true,
+		alone = false,
 	},
 	{
 		name = "js",
-		part = true,
+		alone = true,
 	},
 }
 
