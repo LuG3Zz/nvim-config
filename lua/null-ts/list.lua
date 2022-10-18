@@ -5,6 +5,15 @@ local formatting = "formatting"
 local hover = "hover"
 
 local list = {
+	-- To add one of null-ts component,
+	-- you just add a table with name and attribute,
+	-- the attributes are :
+	-- "code_action",
+	-- "completion",
+	-- "diagnostics",
+	-- "formatting",
+	-- "hover"
+	-- For detailed support of components, please see null-ts BUILTIN
 	{ "clang_format", { formatting } },
 	{ "cmake_format", { formatting } },
 	{ "gofumpt", { formatting } },
