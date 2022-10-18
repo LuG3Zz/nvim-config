@@ -10,13 +10,13 @@ require("dap.dap-config")
 local list = require("dap.list")
 
 local handlers = {}
-local parts = {}
+local alones = {}
 local sources = {}
 
 for _, ele in pairs(list) do
 	table.insert(sources, ele.name)
 	if ele.alone then
-		table.insert(parts, "dap.config." .. ele.name)
+		table.insert(alones, "dap.config." .. ele.name)
 	else
 		handlers[ele.name] = require("dap.config." .. ele.name)
 	end
@@ -30,6 +30,6 @@ mason_dap.setup({
 -- config dap
 mason_dap.setup_handlers(handlers)
 
-for _, ele in pairs(parts) do
+for _, ele in pairs(alones) do
 	require(ele)
 end
