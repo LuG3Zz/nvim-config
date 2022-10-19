@@ -1,4 +1,4 @@
-local dap_util = require("dap.util")
+local dap_util = require("dap.dap-util")
 
 local status, dap = pcall(require, "dap")
 if not status then
@@ -35,6 +35,24 @@ local config = function()
 			},
 		},
 		{
+			name = "Attach process",
+			type = "cppdbg",
+			request = "attach",
+			processId = require("dap.utils").pick_process,
+			program = function()
+				return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+			end,
+			cwd = "${workspaceFolder}",
+			setupCommands = {
+				{
+					description = "enable pretty printing",
+					text = "-enable-pretty-printing",
+					ignoreFailures = false,
+				},
+			},
+		},
+		{
+
 			name = "Attach to gdbserver :1234",
 			type = "cppdbg",
 			request = "launch",

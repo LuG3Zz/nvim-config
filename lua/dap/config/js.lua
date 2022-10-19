@@ -1,4 +1,4 @@
-local dap_util = require("dap.util")
+local dap_util = require("dap.dap-util")
 
 local status, dap_vscode_js = pcall(require, "dap-vscode-js")
 if not status then

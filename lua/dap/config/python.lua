@@ -1,4 +1,4 @@
-local dap_util = require("dap.util")
+local dap_util = require("dap.dap-util")
 
 local status, dap_python = pcall(require, "dap-python")
 if not status then
