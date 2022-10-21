@@ -52,3 +52,11 @@ You can also achieve the same effect by using `ctrl+s`(you may want to know why 
 4. **Enjoy your self!**
 
 Now, you have config `Neovim` completely, enjoy it!
+
+## Recommend Environment
+
+- GO
+- RUST
+- CLANG
+- GCC
+- NODE

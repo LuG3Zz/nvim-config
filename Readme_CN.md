@@ -46,3 +46,11 @@ nvim ~/.config/nvim/lua/plugins.lua
 4. **享受`neovim`开发**
 
 现在，所有插件应该已经安装完成了，好好享受使用`Neovim`开发吧
+
+## 推荐本地使用的环境
+
+- GO
+- RUST
+- CLANG
+- GCC
+- NODE
