@@ -5,6 +5,12 @@ if not status then
 	return
 end
 
+local noice_status, noice = pcall(require, "noice")
+if not status then
+	vim.notify("not found lualine")
+	return
+end
+
 lualine.setup({
 	options = {
 		theme = "tokyonight",
@@ -17,11 +23,25 @@ lualine.setup({
 		lualine_c = {
 			"filename",
 			{
-				"lsp_progress",
-				spinner_symbols = { " ", " ", " ", " ", " ", " " },
+				noice.api.status.message.get_hl,
+				cond = noice.api.status.message.has,
 			},
+			-- {
+			-- "lsp_progress",
+			-- spinner_symbols = { " ", " ", " ", " ", " ", " " },
+			-- },
 		},
 		lualine_x = {
+			{
+				noice.api.status.search.get,
+				noice.api.status.search.has,
+				color = { fg = "#ff9e64" },
+			},
+			{
+				noice.api.status.command.get,
+				cond = noice.api.status.command.has,
+				color = { fg = "#ff9e64" },
+			},
 			"filesize",
 			{
 				"fileformat",

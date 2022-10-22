@@ -36,7 +36,7 @@ noice.setup({
 	popupmenu = {
 		enabled = true, -- enables the Noice popupmenu UI
 		---@type 'nui'|'cmp'
-		backend = "nui", -- backend to use to show regular cmdline completions
+		backend = "cmp", -- backend to use to show regular cmdline completions
 	},
 	---@type NoiceRouteConfig
 	history = {
@@ -55,7 +55,7 @@ noice.setup({
 		view = "notify",
 	},
 	lsp_progress = {
-		enabled = false,
+		enabled = true,
 		-- Lsp Progress is formatted using the builtins for lsp_progress. See config.format.builtin
 		-- See the section on formatting for more details on how to customize.
 		--- @type NoiceFormat|string
@@ -69,9 +69,31 @@ noice.setup({
 	---@type NoiceConfigViews
 	views = {}, ---@see section on views
 	---@type NoiceRouteConfig[]
-	routes = {}, --- @see section on routes
+	routes = {
+		{
+			filter = { event = "msg_show", kind = "search_count" },
+			opts = { skip = true },
+		},
+	}, --- @see section on routes
 	---@type table<string, NoiceFilter>
 	status = {}, --- @see section on statusline components
 	---@type NoiceFormatOptions
-	format = {}, --- @see section on formatting
+	format = {
+		-- default format
+		default = { "{level} ", "{title} ", "{message}" },
+		-- default format for vim.notify views
+		notify = { "{message}" },
+		-- default format for the history
+		details = {
+			"{level} ",
+			"{date} ",
+			"{event}",
+			{ "{kind}", before = { ".", hl_group = "Comment" } },
+			" ",
+			"{title} ",
+			"{message}",
+		},
+		telescope = ..., -- formatter used to display telescope results
+		telescope_preview = ..., -- formatter used to preview telescope results
+	}, --- @see section on formatting
 })

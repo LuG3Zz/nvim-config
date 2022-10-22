@@ -72,3 +72,6 @@ require("plugin-config.twilight")
 
 -- zen-mode
 require("plugin-config.zen-mode")
+
+-- noice
+require("plugin-config.noice")
