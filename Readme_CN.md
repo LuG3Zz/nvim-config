@@ -4,6 +4,18 @@
 
 该配置文件可以在主流 Linux 发行版和 Windows 上使用，操作很简单，只需要安装好几个必备的依赖就可以轻松使用！
 
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/main.gif)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/debug.gif)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/debug-js.gif)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/home.png)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/highlight.png)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/outline%20and%20tree.png)
+
 ## 必备依赖
 
 - [Nerd fonts](https://www.nerdfonts.com/font-downloads)
