@@ -108,6 +108,18 @@ packer.startup({
 		use("folke/twilight.nvim")
 		-- Zen-mode
 		use("folke/zen-mode.nvim")
+		--  replaces the UI  for messages, cmdline and the popupmenu
+		use({
+			"folke/noice.nvim",
+			requires = {
+				-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+				"MunifTanjim/nui.nvim",
+				-- OPTIONAL:
+				--   `nvim-notify` is only needed, if you want to use the notification view.
+				--   If not available, we use `mini` as the fallback
+				"rcarriga/nvim-notify",
+			},
+		})
 
 		-- Improve startup time for Neovim
 		use("lewis6991/impatient.nvim")

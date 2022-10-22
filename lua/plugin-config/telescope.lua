@@ -27,3 +27,4 @@ telescope.setup({
 -- Telescope extensions
 pcall(telescope.load_extension, "env")
 pcall(telescope.load_extension, "dap")
+pcall(telescope.load_extension, "noice")
