@@ -6,6 +6,18 @@ This is my neovim config, and 100% lua!
 
 And now it is can used on mainstream Linux distributions and widnows, all dependencies are modularized, you can easily use it on your computer after installing required external dependencies
 
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/main.gif)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/debug.gif)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/debug-js.gif)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/home.png)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/highlight.png)
+
+![](https://github.com/jinzhongjia/neovim-config/blob/main/image/outline%20and%20tree.png)
+
 ## dependencies
 
 It is recommended to use the system's package manager to install the following dependencies
