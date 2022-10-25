@@ -43,7 +43,7 @@ Then you clone this config with command:
 
 ```bash
 # This will git clone the neovim-config to your system path
-git clone https://github.com/jinzhongjia/neovim-config ~/.local/nvim
+git clone https://github.com/jinzhongjia/neovim-config ~/.cofig/nvim
 ```
 
 3. **Init to auto install plugins**
