@@ -57,7 +57,7 @@ nvim ~/.config/nvim/lua/plugins.lua
 
 4. **退出并重新进入 neovim**
 
-退出并重新进入 neovim,这时它会自动安装所需的依赖（lsp、dap、null-ts、tresitter）。
+退出并重新进入 neovim,这时它会自动安装所需的依赖（lsp、dap、null-ts、tresitter）,可以使用`:checkhealth`来进行错误检测，可以按照其中的 error 选择性修复。
 
 5. **享受`neovim`开发**
 
