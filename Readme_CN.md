@@ -55,7 +55,11 @@ nvim ~/.config/nvim/lua/plugins.lua
 
 现在，在键盘上按下`:w`按键，出发文件保存（该文件已经设定为保存会自动安装检查插件更新）,或者你也可以使用`ctrl+s`的组合键来达到保存文件的效果（这是在快捷键中设置的）
 
-4. **享受`neovim`开发**
+4. **退出并重新进入 neovim**
+
+退出并重新进入 neovim,这时它会自动安装所需的依赖（lsp、dap、null-ts、tresitter）。
+
+5. **享受`neovim`开发**
 
 现在，所有插件应该已经安装完成了，好好享受使用`Neovim`开发吧
 
@@ -66,3 +70,4 @@ nvim ~/.config/nvim/lua/plugins.lua
 - CLANG
 - GCC
 - NODE
+- RUBY

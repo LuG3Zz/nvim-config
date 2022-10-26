@@ -61,7 +61,13 @@ And now let's type `:w`(Don't worry,his just entered the command mode and execut
 
 You can also achieve the same effect by using `ctrl+s`(you may want to know why `ctrl+s` is available, follow the guard!)
 
-4. **Enjoy your self!**
+4. \*\*Exit And Reopen Neovim
+
+Exit and reopen neovim, it will auto install the lsp, dap, null-ts, treesitter dependencies!
+
+Maybe you need to type `:checkhealth` to check out possible errors.
+
+5. **Enjoy your self!**
 
 Now, you have config `Neovim` completely, enjoy it!
 
@@ -72,3 +78,4 @@ Now, you have config `Neovim` completely, enjoy it!
 - CLANG
 - GCC
 - NODE
+- RUBY
