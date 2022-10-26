@@ -21,7 +21,9 @@ packer.startup({
 		-- Treesitter
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			run = ":TSUpdate",
+			run = function()
+				require("nvim-treesitter.install").update({ with_sync = true })
+			end,
 			-- commit = "addc129a4f272aba0834bd0a7b6bd4ad5d8c801b",
 		})
 		use({ "nvim-treesitter/nvim-treesitter-context", requires = { "nvim-treesitter/nvim-treesitter" } })
