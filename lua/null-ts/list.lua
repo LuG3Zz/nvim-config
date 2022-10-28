@@ -20,7 +20,7 @@ local list = {
 	{ "goimports", { formatting } },
 	{ "golines", { formatting } },
 	{ "staticcheck", { diagnostics } },
-	{ "eslint_d", { code_action, diagnostics } },
+	-- { "eslint_d", { code_action, diagnostics } },
 	{
 		"markdownlint",
 		{ --[[ formatting, ]]
