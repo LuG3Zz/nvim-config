@@ -13,7 +13,12 @@ for _, ele in pairs(list) do
 	-- create func of name to register
 	handlers[name] = function()
 		for _, attr in pairs(attrs) do
-			null_ls.register(null_ls.builtins[attr][name])
+			if #ele == 3 then
+				local arg = ele[3]
+				null_ls.register(null_ls.builtins[attr][name].with(arg))
+			else
+				null_ls.register(null_ls.builtins[attr][name])
+			end
 		end
 	end
 end

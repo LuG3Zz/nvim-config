@@ -21,8 +21,13 @@ local list = {
 	{ "golines", { formatting } },
 	{ "staticcheck", { diagnostics } },
 	{ "eslint_d", { code_action, diagnostics } },
-	{ "markdownlint", { formatting, diagnostics } },
-	{ "prettier", { formatting } },
+	{
+		"markdownlint",
+		{ --[[ formatting, ]]
+			diagnostics,
+		},
+	},
+	{ "prettierd", { formatting } },
 	{ "shellcheck", { code_action } },
 	{ "stylua", { formatting } },
 	{ "jq", { formatting } },
@@ -32,7 +37,6 @@ local list = {
 	{ "haml_lint", { diagnostics } },
 	{ "black", { formatting } },
 	{ "isort", { formatting } },
-	-- { "dprint", { formatting } },
 }
 
 return list
