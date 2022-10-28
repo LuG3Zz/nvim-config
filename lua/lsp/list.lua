@@ -16,7 +16,7 @@ local list = {
 	-- { name = "powershell_es", alone = false },
 	{ name = "pyright", alone = false },
 	{ name = "sqls", alone = false }, -- need extra yaml configuration
-	{ name = "tailwindcss", alone = false },
+	{ name = "tailwindcss", alone = true },
 	{ name = "volar", alone = false }, -- Can be customized to override the default tsserver
 }
 

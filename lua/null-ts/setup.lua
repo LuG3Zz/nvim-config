@@ -30,9 +30,7 @@ null_ls.setup({
 		null_ls.builtins.code_actions.gitsigns,
 	},
 	-- save auto format
-	on_attach = function(client)
-		if client.server_capabilities.documentFormattingProvider then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
-		end
+	on_attach = function(_)
+		vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
 	end,
 })
