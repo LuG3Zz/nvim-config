@@ -50,7 +50,7 @@ And then you will see that message which tell you missing a lot of plugins, dont
 
 That looks cool, doesn't it?
 
-3. \*\*Exit And Reopen Neovim
+3. **Exit And Reopen Neovim**
 
 Exit and reopen neovim, it will auto install the lsp, dap, null-ts, treesitter dependencies!
 
