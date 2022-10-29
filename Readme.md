@@ -1,12 +1,5 @@
 # what is this ?
 
-<!--toc:start-->
-- [what is this ?](#what-is-this)
-  - [dependencies](#dependencies)
-  - [QuickStart](#quickstart)
-  - [Recommend Environment](#recommend-environment)
-<!--toc:end-->
-
 <p align="center"> <a href="https://github.com/jinzhongjia/neovim-config/blob/main/Readme_CN.md">中文</a> </p>
 
 This is my neovim config, and 100% lua!
