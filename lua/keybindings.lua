@@ -118,13 +118,13 @@ map("v", "tl", ":TranslateW<CR>", opt)
 map("n", "<leader>n", ":ASToggle<CR>", opt)
 
 -- todo-comments keybinding
-vim.keymap.set("n", "]t", function()
-	require("todo-comments").jump_next()
-end, { desc = "Next todo comment" })
-
-vim.keymap.set("n", "[t", function()
-	require("todo-comments").jump_prev()
-end, { desc = "Previous todo comment" })
+-- vim.keymap.set("n", "]t", function()
+-- 	require("todo-comments").jump_next()
+-- end, { desc = "Next todo comment" })
+--
+-- vim.keymap.set("n", "[t", function()
+-- 	require("todo-comments").jump_prev()
+-- end, { desc = "Previous todo comment" })
 
 -- trouble
 map("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opt)
