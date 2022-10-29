@@ -18,6 +18,7 @@ local list = {
 	{ name = "sqls", alone = false }, -- need extra yaml configuration
 	{ name = "tailwindcss", alone = true },
 	{ name = "volar", alone = false }, -- Can be customized to override the default tsserver
+	{ name = "marksman", alone = false },
 }
 
 return list
