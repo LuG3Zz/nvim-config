@@ -31,11 +31,7 @@ It is recommended to use the system's package manager to install the following d
 
 ## QuickStart
 
-1. **Install `Neovim` packer manager**
-
-First, you nedd to install `packer.nvim`(a neovim package manager), you can learn it from [here](https://github.com/wbthomason/packer.nvim#quickstart)
-
-2. **Git clone configuration to local**
+1. **Git clone configuration to local**
 
 Then you clone this config with command:
 
@@ -46,32 +42,27 @@ Then you clone this config with command:
 git clone https://github.com/jinzhongjia/neovim-config ~/.cofig/nvim
 ```
 
-3. **Init to auto install plugins**
+2. **Open Nvim To Auto Configurate**
 
-Now, you use neovim open this file`~/.local/nvim/lua/plugins.lua`(this file is your plugins config) through the following command
+Now, you just need to use this command `nvim` to open neovim!
 
-> Unix, Linux
+And then you will see that message which tell you missing a lot of plugins, dont worry, just press `ENTER` to continue, then the `packer` will Automatically install all plugins.
 
-```bash
-nvim ~/.config/nvim/lua/plugins.lua
+That looks cool, doesn't it?
 
-```
-
-And now let's type `:w`(Don't worry,his just entered the command mode and executed the save command )
-
-You can also achieve the same effect by using `ctrl+s`(you may want to know why `ctrl+s` is available, follow the guard!)
-
-4. \*\*Exit And Reopen Neovim
+3. \*\*Exit And Reopen Neovim
 
 Exit and reopen neovim, it will auto install the lsp, dap, null-ts, treesitter dependencies!
 
 Maybe you need to type `:checkhealth` to check out possible errors.
 
-5. **Enjoy your self!**
+4. **Enjoy your self!**
 
 Now, you have config `Neovim` completely, enjoy it!
 
 ## Recommend Environment
+
+The following environments may be used in lsp (language server proctool), it is recommended to install!
 
 - GO
 - RUST
