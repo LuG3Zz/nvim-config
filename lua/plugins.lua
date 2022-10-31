@@ -145,6 +145,7 @@ packer.startup({
 		use("projekt0n/github-nvim-theme")
 		use("EdenEast/nightfox.nvim")
 		-------------------------------------------------------
+		-- bootstrap
 		if packer_bootstrap then
 			require("packer").sync()
 		end

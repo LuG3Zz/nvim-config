@@ -1,4 +1,22 @@
 local opt = {
+	settings = {
+		["rust-analyzer"] = {
+			imports = {
+				granularity = {
+					group = "module",
+				},
+				prefix = "self",
+			},
+			cargo = {
+				buildScripts = {
+					enable = true,
+				},
+			},
+			procMacro = {
+				enable = true,
+			},
+		},
+	},
 	on_attach = function(client, bufnr)
 		-- Disable the formatting function and leave it to a special plug-in plug-in for processing
 		client.server_capabilities.documentFormattingProvider = true
