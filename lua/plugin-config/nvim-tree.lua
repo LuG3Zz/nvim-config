@@ -20,7 +20,7 @@ nvim_tree.setup({
 	-- Hide .files and node_modules folders
 	filters = {
 		dotfiles = true,
-		custom = { "node_modules" },
+		custom = { "node_modules", "__pycache__" },
 	},
 	view = {
 		-- Width

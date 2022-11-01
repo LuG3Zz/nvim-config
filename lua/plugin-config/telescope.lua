@@ -10,7 +10,7 @@ telescope.setup({
 		initial_mode = "insert",
 		-- Shortcut keys in the window
 		mappings = require("keybindings").telescopeList,
-		file_ignore_patterns = { "node_modules", "dist" },
+		file_ignore_patterns = { "node_modules", "dist", "__pycache__" },
 	},
 	pickers = {
 		-- Built-in pickers configuration
