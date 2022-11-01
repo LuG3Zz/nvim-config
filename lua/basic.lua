@@ -1,5 +1,8 @@
 -- utf8
 vim.g.encoding = "UTF-8"
+
+vim.g.loaded_perl_provider = 0
+
 vim.o.fileencoding = "utf-8"
 -- Keep 8 lines around the cursor when jkhl moves
 vim.o.scrolloff = 8
