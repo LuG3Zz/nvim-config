@@ -14,6 +14,8 @@ local list = {
 	-- "formatting",
 	-- "hover"
 	-- For detailed support of components, please see null-ts BUILTIN
+	-- And you can add third element to the table, which is the param of function "with"
+	-- more about above, see https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md#runtime_condition
 	{ "clang_format", { formatting } },
 	{ "cmake_format", { formatting } },
 	{ "gofumpt", { formatting } },
