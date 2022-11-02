@@ -39,7 +39,7 @@ Then you clone this config with command:
 
 ```bash
 # This will git clone the neovim-config to your system path
-git clone https://github.com/jinzhongjia/neovim-config ~/.cofig/nvim
+git clone https://github.com/jinzhongjia/neovim-config ~/.config/nvim
 ```
 
 2. **Open Nvim To Auto Configurate**
