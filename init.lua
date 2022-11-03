@@ -75,3 +75,5 @@ require("plugin-config.zen-mode")
 
 -- noice
 require("plugin-config.noice")
+
+require("plugin-config.asynctasks")
