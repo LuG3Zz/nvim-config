@@ -6,7 +6,7 @@ if not status then
 end
 
 local noice_status, noice = pcall(require, "noice")
-if not status then
+if not noice_status then
 	vim.notify("not found lualine")
 	return
 end
