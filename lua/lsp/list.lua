@@ -19,6 +19,7 @@ local list = {
 	{ name = "tailwindcss", alone = true },
 	{ name = "volar", alone = false }, -- Can be customized to override the default tsserver
 	{ name = "marksman", alone = false },
+	{ name = "vimls", alone = false },
 }
 
 return list
