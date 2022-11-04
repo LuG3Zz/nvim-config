@@ -14,6 +14,7 @@ local opt = {
 			diagnostics = {
 				-- Get the language server to recognize the `vim` global
 				globals = { "vim" },
+				workspaceRate = 50,
 			},
 			workspace = {
 				-- Make the server aware of Neovim runtime files
