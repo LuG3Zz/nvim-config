@@ -136,7 +136,6 @@ packer.startup({
 			},
 		})
 		use({ "skywind3000/asynctasks.vim", requires = { "skywind3000/asyncrun.vim" } })
-		use("rafcamlet/nvim-whid")
 
 		-- Improve startup time for Neovim
 		use("lewis6991/impatient.nvim")
