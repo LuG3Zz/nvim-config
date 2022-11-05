@@ -57,6 +57,7 @@ local list = {
 	{ "haml_lint", { diagnostics } },
 	{ "black", { formatting } },
 	{ "isort", { formatting } },
+	{ "vint", { diagnostics } },
 }
 
 return list
