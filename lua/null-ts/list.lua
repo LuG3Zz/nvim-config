@@ -58,6 +58,7 @@ local list = {
 	{ "black", { formatting } },
 	{ "isort", { formatting } },
 	{ "vint", { diagnostics } },
+	{ "rustfmt", { formatting } },
 }
 
 return list
