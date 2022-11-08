@@ -15,8 +15,8 @@ local list = {
 	-- { name = "psalm", alone = false },
 	-- { name = "powershell_es", alone = false },
 	-- { name = "pyright", alone = false },
-	{ name = "jedi_language_server", alone = false },
-	-- { name = "pylsp", alone = false },
+	-- { name = "jedi_language_server", alone = false },
+	{ name = "pylsp", alone = false },
 	{ name = "sqls", alone = false }, -- need extra yaml configuration
 	{ name = "tailwindcss", alone = true },
 	{ name = "volar", alone = false }, -- Can be customized to override the default tsserver
