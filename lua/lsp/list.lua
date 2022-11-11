@@ -26,9 +26,9 @@ local list = {
 	{ name = "dockerls", alone = false },
 	{ name = "cssls", alone = false },
 	{ name = "hls", alone = false },
-	{ name = "vls", alone = false },
-	{ name = "kotlin_language_server", alone = false },
-	{ name = "nimls", alone = false },
+	-- { name = "vls", alone = false },
+	-- { name = "kotlin_language_server", alone = false },
+	-- { name = "nimls", alone = false },
 }
 
 return list
