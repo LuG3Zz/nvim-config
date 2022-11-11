@@ -28,6 +28,7 @@ local list = {
 	{ name = "hls", alone = false },
 	{ name = "vls", alone = false },
 	{ name = "kotlin_language_server", alone = false },
+	{ name = "nimls", alone = false },
 }
 
 return list
