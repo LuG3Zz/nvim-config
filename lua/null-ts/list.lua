@@ -54,7 +54,7 @@ local list = {
 		},
 	},
 	{ "hadolint", { diagnostics } },
-	{ "haml_lint", { diagnostics } },
+	-- { "haml_lint", { diagnostics } },
 	{ "black", { formatting } },
 	{ "isort", { formatting } },
 	{ "vint", { diagnostics } },
