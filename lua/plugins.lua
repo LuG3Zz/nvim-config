@@ -60,7 +60,7 @@ packer.startup({
 		use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 		use("hrsh7th/cmp-nvim-lsp-document-symbol") -- { name = 'nvim_lsp_document_symbol' }
 		use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
-		use("ray-x/cmp-treesitter") -- {name = 'treesitter'}
+		-- use("ray-x/cmp-treesitter") -- {name = 'treesitter'}
 		-- Common programming language code snippets
 		use("rafamadriz/friendly-snippets")
 		-- JSON enhance

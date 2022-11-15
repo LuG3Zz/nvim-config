@@ -24,7 +24,7 @@ cmp.setup({
 		{ name = "vsnip" },
 
 		-- treesitter
-		{ name = "treesitter" },
+		-- { name = "treesitter" },
 
 		-- document-symbol
 		{ name = "nvim_lsp_document_symbol" },
