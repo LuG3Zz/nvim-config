@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  fencview = {
+    loaded = true,
+    path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/fencview",
+    url = "https://github.com/mbbill/fencview"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/friendly-snippets",

@@ -142,6 +142,8 @@ packer.startup({
 
 		-- Improve startup time for Neovim
 		use("lewis6991/impatient.nvim")
+		-- encoding
+		use("mbbill/fencview")
 		--markdownpreview
 		use({
 			"iamcco/markdown-preview.nvim",

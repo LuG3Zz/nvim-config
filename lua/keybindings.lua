@@ -36,7 +36,7 @@ map("n", "s=", "<C-w>=", opt)
 -- Terminal related
 map("n", "<leader>t", ":sp | terminal<CR>", opt)
 map("n", "<leader>vt", ":vsp | terminal<CR>", opt)
-map("t", "<C-s>", "<C-\\><C-n>", opt)
+map("t", "<ESC>", "<C-\\><C-n>", opt)
 map("t", "<C-h>", [[ <C-\><C-N><C-w>h ]], opt)
 map("t", "<C-j>", [[ <C-\><C-N><C-w>j ]], opt)
 map("t", "<C-k>", [[ <C-\><C-N><C-w>k ]], opt)
@@ -81,8 +81,8 @@ map("v", "<C-x>", '"+d', opt) -- 剪切
 
 -- bufferline keybind
 -- Left and right tab switching
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<leader>=", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<leader>-", ":BufferLineCycleNext<CR>", opt)
 -- Close
 --"moll/vim-bbye"
 map("n", "<C-w>", ":Bdelete!<CR>", opt)
