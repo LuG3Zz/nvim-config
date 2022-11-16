@@ -15,10 +15,10 @@ map("n", "sc", "<C-w>c", opt)
 -- Close other
 map("n", "so", "<C-w>o", opt)
 -- Alt + hjkl jump between windows
-map("n", "<A-h>", "<C-w>h", opt)
-map("n", "<A-j>", "<C-w>j", opt)
-map("n", "<A-k>", "<C-w>k", opt)
-map("n", "<A-l>", "<C-w>l", opt)
+map("n", "<C-h>", "<C-w>h", opt)
+map("n", "<C-j>", "<C-w>j", opt)
+map("n", "<C-k>", "<C-w>k", opt)
+map("n", "<C-l>", "<C-w>l", opt)
 
 -- Left and right proportional control
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
@@ -36,11 +36,11 @@ map("n", "s=", "<C-w>=", opt)
 -- Terminal related
 map("n", "<leader>t", ":sp | terminal<CR>", opt)
 map("n", "<leader>vt", ":vsp | terminal<CR>", opt)
-map("t", "<A-s>", "<C-\\><C-n>", opt)
-map("t", "<A-h>", [[ <C-\><C-N><C-w>h ]], opt)
-map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
-map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opt)
-map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opt)
+map("t", "<C-s>", "<C-\\><C-n>", opt)
+map("t", "<C-h>", [[ <C-\><C-N><C-w>h ]], opt)
+map("t", "<C-j>", [[ <C-\><C-N><C-w>j ]], opt)
+map("t", "<C-k>", [[ <C-\><C-N><C-w>k ]], opt)
+map("t", "<C-l>", [[ <C-\><C-N><C-w>l ]], opt)
 
 -- Indent code in visual mode
 map("v", "<", "<gv", opt)
@@ -50,8 +50,8 @@ map("v", "J", ":move '>+1<CR>gv-gv", opt)
 map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
 -- Scroll up and down
-map("n", "<C-j>", "4j", opt)
-map("n", "<C-k>", "4k", opt)
+map("n", "<A-j>", "4j", opt)
+map("n", "<A-k>", "4k", opt)
 -- Ctrl u / ctrl + d move only 9 lines, half screen by default
 map("n", "<C-u>", "9k", opt)
 map("n", "<C-d>", "9j", opt)
@@ -65,12 +65,12 @@ map("n", "qq", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
 
 -- In insert mode, jump to the beginning of the line and the end of the line
-map("i", "<C-h>", "<ESC>I", opt)
-map("i", "<C-l>", "<ESC>A", opt)
+map("n", "<A-h>", "0", opt)
+map("n", "<A-l>", "$", opt)
 
 -- ctrl+s save
-map("n", "<C-s>", ":w<CR>", opt)
-map("i", "<C-s>", "<ESC>:w<CR>", opt)
+map("n", "S", ":w<CR>", opt)
+map("n", "Ss", "<ESC>:wq<CR>", opt)
 
 -- Configure Copy Shortcuts
 map("v", "<C-c>", '"+y', opt) -- 复制
@@ -97,18 +97,19 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- Global search
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>of", ":Telescope oldfiles<CR>", opt)
 
 -- symbols-outline
 map("n", "ol", ":SymbolsOutline<CR>", opt)
 
 -- Floating terminal floaterm
-map("n", "ft", ":FloatermNew<CR>", opt)
-map("n", "fj", ":FloatermPrev<CR>", opt)
-map("n", "fk", ":FloatermNext<CR>", opt)
-map("n", "fs", ":FloatermToggle<CR>", opt)
-map("n", "fc", ":FloatermKill<CR>", opt)
-map("n", "fd", ":FloatermNew lazydocker <CR>", opt)
-map("n", "fg", ":FloatermNew lazygit <CR>", opt)
+map("n", ",ft", ":FloatermNew<CR>", opt)
+map("n", ",fj", ":FloatermPrev<CR>", opt)
+map("n", ",fk", ":FloatermNext<CR>", opt)
+map("n", ",fs", ":FloatermToggle<CR>", opt)
+map("n", ",fc", ":FloatermKill<CR>", opt)
+map("n", ",fd", ":FloatermNew lazydocker <CR>", opt)
+map("n", ",fg", ":FloatermNew lazygit <CR>", opt)
 
 -- translator
 map("n", "tl", ":TranslateW<CR>", opt)
@@ -135,8 +136,8 @@ map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opt)
 map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opt)
 
 -- asynctask
-map("n", "<f9>", ":AsyncTask file-build<cr>", opt)
-map("n", "<f5>", ":AsyncTask file-run<cr>", opt)
+map("n", "<A-b>", ":AsyncTask file-build<cr>", opt)
+map("n", "<A-r>", ":AsyncTask file-run<cr>", opt)
 
 --------------------------------
 --------------------------------
@@ -172,13 +173,13 @@ pluginKeys.nvimTreeList = {
 pluginKeys.telescopeList = {
 	i = {
 		-- Moving up and down
-		["<C-j>"] = "move_selection_next",
-		["<C-k>"] = "move_selection_previous",
+		["<C-n>"] = "move_selection_next",
+		["<C-p>"] = "move_selection_previous",
 		["<Down>"] = "move_selection_next",
 		["<Up>"] = "move_selection_previous",
 		-- history record
-		["<C-n>"] = "cycle_history_next",
-		["<C-p>"] = "cycle_history_prev",
+		["<C-j>"] = "cycle_history_next",
+		["<C-k>"] = "cycle_history_prev",
 		-- close the window
 		["<C-c>"] = "close",
 		-- The preview window scrolls up and down
@@ -240,9 +241,9 @@ pluginKeys.cmp = function(cmp)
 			c = cmp.mapping.close(),
 		}),
 		-- Prev
-		["<C-k>"] = cmp.mapping.select_prev_item(),
+		["<C-p>"] = cmp.mapping.select_prev_item(),
 		-- Next
-		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<C-n>"] = cmp.mapping.select_next_item(),
 		-- confirm
 		["<CR>"] = cmp.mapping.confirm({
 			select = true,

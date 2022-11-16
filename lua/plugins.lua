@@ -31,6 +31,8 @@ packer.startup({
 		use("glepnir/dashboard-nvim")
 		-- Project
 		use("ahmedkhalf/project.nvim")
+		--surround
+		use("tpope/vim-surround")
 		-- Treesitter
 		use({
 			"nvim-treesitter/nvim-treesitter",
@@ -140,6 +142,13 @@ packer.startup({
 
 		-- Improve startup time for Neovim
 		use("lewis6991/impatient.nvim")
+		--markdownpreview
+		use({
+			"iamcco/markdown-preview.nvim",
+			run = function()
+				vim.fn["mkdp#util#install"]()
+			end,
+		})
 
 		--------------------- colorschemes --------------------
 		-- Tokyonight
