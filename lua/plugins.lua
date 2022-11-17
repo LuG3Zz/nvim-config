@@ -144,6 +144,8 @@ packer.startup({
 		use("lewis6991/impatient.nvim")
 		-- encoding
 		use("mbbill/fencview")
+		--visual-mutil
+		use("mg979/vim-visual-multi")
 		--markdownpreview
 		use({
 			"iamcco/markdown-preview.nvim",

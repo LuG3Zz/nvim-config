@@ -389,6 +389,11 @@ _G.packer_plugins = {
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/vim-translator",
     url = "https://github.com/voldikss/vim-translator"
   },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/vim-vsnip",

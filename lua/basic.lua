@@ -81,3 +81,5 @@ vim.o.pumheight = 10
 vim.o.showtabline = 2
 -- vim's modal prompt is no longer required after using the enhanced status bar plugin
 vim.o.showmode = false
+-- vsnip
+vim.g.vsnip_snippet_dir = "~/.config/nvim/.vsnip"

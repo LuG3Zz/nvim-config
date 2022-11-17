@@ -60,9 +60,9 @@ map("n", "<C-d>", "9j", opt)
 map("v", "p", '"_dP', opt)
 
 -- Exit
-map("n", "q", ":q<CR>", opt)
-map("n", "qq", ":q!<CR>", opt)
-map("n", "Q", ":qa!<CR>", opt)
+--map("n", "q", ":q<CR>", opt)
+--map("n", "qq", ":q!<CR>", opt)
+--map("n", "Q", ":qa!<CR>", opt)
 
 -- In insert mode, jump to the beginning of the line and the end of the line
 map("n", "<A-h>", "0", opt)
