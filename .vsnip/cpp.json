@@ -1,10 +1,8 @@
 {
   "func": {
-    "prefix": [
-      "func"
-    ],
+    "prefix": ["func"],
     "body": [
-      "${1|int,float,double,char,short,*|} $2()",
+      "${1|void,int,float,double,char,short,*|} $2()",
       "{",
       "\treturn $3;",
       "}"

@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/fencview",
     url = "https://github.com/mbbill/fencview"
   },
+  ["flit.nvim"] = {
+    loaded = true,
+    path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/flit.nvim",
+    url = "https://github.com/ggandor/flit.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -168,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/home/brownlu/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,

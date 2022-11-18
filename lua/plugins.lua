@@ -146,6 +146,9 @@ packer.startup({
 		use("mbbill/fencview")
 		--visual-mutil
 		use("mg979/vim-visual-multi")
+		--nvim leap
+		use("ggandor/leap.nvim")
+		use("ggandor/flit.nvim")
 		--markdownpreview
 		use({
 			"iamcco/markdown-preview.nvim",
