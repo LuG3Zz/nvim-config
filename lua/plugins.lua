@@ -162,6 +162,8 @@ packer.startup({
 		use("folke/tokyonight.nvim")
 		use("projekt0n/github-nvim-theme")
 		use("EdenEast/nightfox.nvim")
+		--nvim-transparent
+		use("xiyaowong/nvim-transparent")
 		-------------------------------------------------------
 		-- bootstrap
 		if packer_bootstrap then

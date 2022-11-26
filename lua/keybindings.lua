@@ -77,6 +77,9 @@ map("v", "<C-c>", '"+y', opt) -- 复制
 map("v", "<C-x>", '"+d', opt) -- 剪切
 
 --------------------------------
+--ESC
+map("i", "<C-[>", "<ESC>", opt)
+
 --------------------------------
 
 -- bufferline keybind
@@ -164,6 +167,9 @@ local pluginKeys = {}
 -- nvim-tree
 -- alt + m key to open and close tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+--fetch
+map("n", "\\", ":FencAutoDetect<CR>", opt)
+
 -- List shortcuts
 pluginKeys.nvimTreeList = {
 	-- Open a file or folder

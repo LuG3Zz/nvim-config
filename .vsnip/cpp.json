@@ -1,6 +1,8 @@
 {
   "func": {
-    "prefix": ["func"],
+    "prefix": [
+      "func"
+    ],
     "body": [
       "${1|void,int,float,double,char,short,*|} $2()",
       "{",
@@ -8,5 +10,29 @@
       "}"
     ],
     "description": "create a function"
+  },
+  "iostream": {
+    "prefix": [
+      "io"
+    ],
+    "body": [
+      "#include <iostream>",
+      "using namespace std;",
+      "$1",
+      "int main (int argc, char *argv[])",
+      "{",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "iostream"
+  },
+  "line": {
+    "prefix": [
+      ",l"
+    ],
+    "body": [
+      "//============== $1 ================"
+    ],
+    "description": "line"
   }
 }
