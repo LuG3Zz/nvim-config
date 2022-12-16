@@ -4,4 +4,6 @@ if not status then
 	return
 end
 
-noice.setup()
+noice.setup(){
+  background_colour = "#000000"
+}
