@@ -106,13 +106,13 @@ map("n", "<leader>of", ":Telescope oldfiles<CR>", opt)
 map("n", "ol", ":SymbolsOutline<CR>", opt)
 
 -- Floating terminal floaterm
-map("n", ",ft", ":FloatermNew<CR>", opt)
-map("n", ",fj", ":FloatermPrev<CR>", opt)
-map("n", ",fk", ":FloatermNext<CR>", opt)
-map("n", ",fs", ":FloatermToggle<CR>", opt)
-map("n", ",fc", ":FloatermKill<CR>", opt)
-map("n", ",fd", ":FloatermNew lazydocker <CR>", opt)
-map("n", ",fg", ":FloatermNew lazygit <CR>", opt)
+map("n", "<leader>ft", ":FloatermNew<CR>", opt)
+map("n", "<leader>fj", ":FloatermPrev<CR>", opt)
+map("n", "<leader>fk", ":FloatermNext<CR>", opt)
+map("n", "<leader>fs", ":FloatermToggle<CR>", opt)
+map("n", "<leader>fc", ":FloatermKill<CR>", opt)
+map("n", "<leader>fd", ":FloatermNew lazydocker <CR>", opt)
+map("n", "<leader>fg", ":FloatermNew lazygit <CR>", opt)
 
 -- translator
 map("n", "tl", ":TranslateW<CR>", opt)
@@ -147,13 +147,13 @@ map("n", "<A-r>", ":AsyncTask file-run<cr>", opt)
 -- leap config
 require("leap").add_default_mappings()
 -- Disable auto jump first match
-require('leap').opts.safe_labels = {}
+require("leap").opts.safe_labels = {}
 require("leap").opts.highlight_unlabeled_phase_one_targets = true
-vim.keymap.set({ "x", "o", "n" }, "r", "<Plug>(leap-forward-to)")
-vim.keymap.set({ "x", "o", "n" }, "R", "<Plug>(leap-backward-to)")
+vim.keymap.set({ "x", "o", "n" }, "<leader>r", "<Plug>(leap-forward-to)")
+vim.keymap.set({ "x", "o", "n" }, "<leader>R", "<Plug>(leap-backward-to)")
 ---- flit config
 require("flit").setup({
-	keys = { f = "f", F = "F", t = "t", T = "T" },
+	keys = { f = "ff", F = "FF", t = "tt", T = "TT" },
 	-- A string like "nv", "nvo", "o", etc.
 	labeled_modes = "v",
 	multiline = true,
@@ -254,11 +254,15 @@ pluginKeys.cmp = function(cmp)
 		local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 		return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 	end
+
+	local t = function(str)
+		return vim.api.nvim_replace_termcodes(str, true, true, true)
+	end
 	return {
 		-- Completion appears
-		["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		["<A-,>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		-- Cancel
-		["<A-,>"] = cmp.mapping({
+		["<A-.>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
@@ -294,6 +298,8 @@ pluginKeys.cmp = function(cmp)
 				cmp.select_next_item()
 			elseif vim.fn["vsnip#available"](1) == 1 then
 				feedkey("<Plug>(vsnip-expand-or-jump)", "")
+			elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+				vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), "m", true)
 			elseif has_words_before() then
 				cmp.complete()
 			else
@@ -306,6 +312,8 @@ pluginKeys.cmp = function(cmp)
 				cmp.select_prev_item()
 			elseif vim.fn["vsnip#jumpable"](-1) == 1 then
 				feedkey("<Plug>(vsnip-jump-prev)", "")
+			elseif vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+				return vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_backward)"), "m", true)
 			end
 		end, { "i", "s" }),
 		-- end of super Tab

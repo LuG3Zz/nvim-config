@@ -25,8 +25,9 @@ local list = {
 	-- { "eslint_d", { code_action, diagnostics } },
 	{
 		"markdownlint",
-		{ --[[ formatting, ]]
-			diagnostics,
+		{
+			formatting,
+			--diagnostics,
 		},
 	},
 	{ "prettierd", { formatting } },

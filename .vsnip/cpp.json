@@ -1,19 +1,7 @@
 {
-  "func": {
+  "ios": {
     "prefix": [
-      "func"
-    ],
-    "body": [
-      "${1|void,int,float,double,char,short,*|} $2()",
-      "{",
-      "\treturn $3;",
-      "}"
-    ],
-    "description": "create a function"
-  },
-  "iostream": {
-    "prefix": [
-      "io"
+      "ios"
     ],
     "body": [
       "#include <iostream>",
@@ -26,13 +14,17 @@
     ],
     "description": "iostream"
   },
-  "line": {
+  "main": {
     "prefix": [
-      ",l"
+      "main"
     ],
     "body": [
-      "//============== $1 ================"
+      "int main (int argc, char *argv[])",
+      "{",
+      "\t $1"
+      "\treturn 0;",
+      "}"
     ],
-    "description": "line"
-  }
+    "description": "main func"
+  },
 }

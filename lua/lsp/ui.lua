@@ -59,7 +59,7 @@ lspkind.init({
 
 -- lspsaga
 local lspsaga = require("lspsaga")
-lspsaga.init_lsp_saga({
+lspsaga.setup({
 	-- Options with default value
 	-- "single" | "double" | "rounded" | "bold" | "plus"
 	border_style = "plus",
@@ -137,6 +137,15 @@ lspsaga.init_lsp_saga({
 	-- the related filetypes into this table
 	-- like server_filetype_map = { metals = { "sbt", "scala" } }
 	server_filetype_map = {},
+	preview = {
+		lines_above = 0,
+		lines_below = 10,
+	},
+	scroll_preview = {
+		scroll_down = "<C-f>",
+		scroll_up = "<C-b>",
+	},
+	request_timeout = 2000,
 	symbol_in_winbar = {
 		enable = true,
 		click_support = function(node, clicks, button, modifiers)

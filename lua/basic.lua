@@ -83,5 +83,7 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 -- vsnip
 vim.g.vsnip_snippet_dir = "~/.config/nvim/.vsnip"
+vim.g.UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "~/.config/nvim/my_snippets"
+vim.g.UltiSnipsSnippetDirectories = { "UltiSnips", "my_snippets" }
 --encoding
 vim.g.fencview_autodetect = 1

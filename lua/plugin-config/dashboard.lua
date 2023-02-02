@@ -4,38 +4,48 @@ if not status then
 	return
 end
 
-db.custom_footer = {
+local custom_footer = {
 	"",
-	"",
-	"Hello,world!",
+	"Nothing is easy, but who wants nothing?",
+	"                         ——Donald Trump",
 }
 
-db.custom_center = {
+local custom_center = {
 	{
 		icon = "  ",
+		icon_hl = "Title",
 		desc = "Projects                            ",
+		desc_hl = "String",
 		action = "Telescope projects",
 	},
 	{
 		icon = "  ",
+		icon_hl = "Title",
 		desc = "Recently files                      ",
+		desc_hl = "String",
 		action = "Telescope oldfiles",
 	},
 	{
 		icon = "  ",
+		icon_hl = "Title",
 		desc = "Edit keybindings                    ",
+		desc_hl = "String",
 		action = "edit ~/.config/nvim/lua/keybindings.lua",
 	},
 	{
-		icon = "  ",
+		icon = "  ",
+		icon_hl = "Title",
 		desc = "Edit Projects                       ",
+		desc_hl = "String",
 		action = "edit ~/.local/share/nvim/project_nvim/project_history",
 	},
-	-- {
-	--   icon = "  ",
-	--   desc = "Edit .bashrc                        ",
-	--   action = "edit ~/.bashrc",
-	-- },
+	{
+		icon = "  ",
+		icon_hl = "Title",
+		desc = "Edit .zshrc                         ",
+		desc_hl = "String",
+		action = "edit ~/.zshrc",
+	},
 	-- {
 	--   icon = "  ",
 	--   desc = "Change colorscheme                  ",
@@ -58,7 +68,7 @@ db.custom_center = {
 	-- },
 }
 
-db.custom_header = {
+local custom_header = {
 	[[██▓     █    ██   ▄████  ▄▄▄       ██▀███ ]],
 	[[▓██▒     ██  ▓██▒ ██▒ ▀█▒▒████▄    ▓██ ▒ ██▒]],
 	[[▒██░    ▓██  ▒██░▒██░▄▄▄░▒██  ▀█▄  ▓██ ░▄█ ▒]],
@@ -70,3 +80,11 @@ db.custom_header = {
 	[[    ░  ░   ░           ░       ░  ░   ░     ]],
 	[[                                            ]],
 }
+db.setup({
+	theme = "doom",
+	config = {
+		header = custom_header, --your header
+		center = custom_center,
+		footer = custom_footer, --your footer
+	},
+})

@@ -54,7 +54,20 @@ packer.startup({
 		use("hrsh7th/nvim-cmp")
 		-- snippet engine
 		use("hrsh7th/vim-vsnip")
+		use({
+			"SirVer/ultisnips",
+			requires = { { "honza/vim-snippets", rtp = "." } },
+			config = function()
+				vim.g.UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
+				vim.g.UltiSnipsJumpForwardTrigger = "<Plug>(ultisnips_jump_forward)"
+				vim.g.UltiSnipsJumpBackwardTrigger = "<Plug>(ultisnips_jump_backward)"
+				vim.g.UltiSnipsListSnippets = "<c-x><c-s>"
+				vim.g.UltiSnipsRemoveSelectModeMappings = 0
+			end,
+		})
+		-- }}}
 		-- snippet source
+		use("quangnguyen30192/cmp-nvim-ultisnips")
 		use("hrsh7th/cmp-vsnip")
 		use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
 		use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
@@ -72,7 +85,13 @@ packer.startup({
 		-- Indent-blankline
 		use("lukas-reineke/indent-blankline.nvim")
 		-- Lspsaga,a light-weight lsp plugin based on neovim's built-in lsp with a highly performant UI.
-		use("glepnir/lspsaga.nvim")
+		use({
+			"glepnir/lspsaga.nvim",
+			branch = "main",
+			config = function()
+				require("lspsaga").setup({})
+			end,
+		})
 		-- Code format
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- A bridge of mason and null-ts
@@ -160,8 +179,12 @@ packer.startup({
 		--------------------- colorschemes --------------------
 		-- Tokyonight
 		use("folke/tokyonight.nvim")
-		use("projekt0n/github-nvim-theme")
 		use("EdenEast/nightfox.nvim")
+		---- Or with configuration
+		use({
+			"projekt0n/github-nvim-theme",
+			tag = "v0.0.7",
+		})
 		--nvim-transparent
 		use("xiyaowong/nvim-transparent")
 		-------------------------------------------------------
